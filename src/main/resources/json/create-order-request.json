@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "userId": {
+      "type": "string"
+    },
+    "sellerId": {
+      "type": "string"
+    },
+    "isInvoice": {
+      "type": "boolean",
+      "default": false
+    },
+    "isSummarizedPdf": {
+      "type": "boolean",
+      "default": false
+    },
+    "orderlines": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/orderLineRequest"
+      }
+    }
+  },
+  "definitions": {
+    "orderLineRequest": {
+      "type": "object",
+      "properties": {
+        "productTitle": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

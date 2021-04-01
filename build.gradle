@@ -1,0 +1,85 @@
+buildscript {
+    ext {
+        js2pVersion = '1.0.2'
+        springfoxVersion = '2.9.2'
+    }
+    repositories {
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath("org.jsonschema2pojo:jsonsc" +
+                "hema2pojo-gradle-plugin:${js2pVersion}")
+    }
+}
+
+plugins {
+    id 'org.springframework.boot' version '2.2.5.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+apply plugin: 'jsonschema2pojo'
+
+group = 'pl.goreit'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(
+//            'org.springframework.cloud:spring-cloud-starter-kubernetes-all:1.1.2.RELEASE',
+            'org.springframework.boot:spring-boot-starter-data-mongodb',
+            'org.springframework.boot:spring-boot-starter-web',
+            'org.springframework.boot:spring-boot-starter-aop',
+            'org.springframework.boot:spring-boot-starter-actuator',
+            "io.springfox:springfox-swagger2:${springfoxVersion}",
+            "io.springfox:springfox-swagger-ui:${springfoxVersion}",
+            group: 'org.springframework.boot', name: 'spring-boot-starter-amqp',
+    )
+    compile 'commons-fileupload:commons-fileupload:1.3.2'
+    compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.3.3.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-core', version: '5.3.3.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.3.3.RELEASE'
+    compile group: 'org.springframework.data', name: 'spring-data-solr', version: '4.2.3.RELEASE'
+
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.11.1'
+
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.4")
+    compile group: 'org.apache.solr', name: 'solr-solrj', version: '8.6.1'
+
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+
+    runtime group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+jsonSchema2Pojo {
+    targetPackage = 'pl.goreit.api.generated'
+    source = files('src/main/resources/json/')
+    includeHashcodeAndEquals = true
+    includeToString = true
+    includeConstructors = true
+    includeSetters = false
+    initializeCollections = true
+    targetVersion = 1.8
+    inclusionLevel = 'NON_EMPTY'
+    dateTimeType = "java.time.LocalDateTime"
+    dateType = "java.time.LocalDate"
+    timeType = "java.time.LocalTime"
+    removeOldOutput = true
+    useBigDecimals = true
+    generateBuilders = true
+}

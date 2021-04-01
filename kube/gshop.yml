@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gshop-dep
+  labels:
+    app: gshop-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gshop
+  template:
+    metadata:
+      labels:
+        app: gshop
+    spec:
+      containers:
+        - name: gshop
+          image: goreit/gshop:latest
+          ports:
+            - containerPort: 8080
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: gshop-svc
+  labels:
+    app: gshop
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: gshop

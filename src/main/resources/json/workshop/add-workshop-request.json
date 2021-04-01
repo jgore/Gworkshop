@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "nip": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "$ref": "address-view.json"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: gshop-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+    - hosts:
+        - gshop.pl
+      secretName: hello-kubernetes-tls
+  rules:
+    - host: gshop.pl
+      http:
+        paths:
+          - backend:
+              serviceName: gshop-front-svc
+              servicePort: 80
+            path: /
+

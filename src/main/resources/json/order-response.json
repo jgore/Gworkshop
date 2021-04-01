@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "sellerId": {
+      "type": "string"
+    },
+    "creationTime": {
+      "type": "string"
+    },
+    "orderlineViews": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/orderlineView"
+      }
+    }
+  },
+  "definitions": {
+    "orderlineView": {
+      "type": "object",
+
+      "properties": {
+        "sellerId": {
+          "type": "string"
+        },
+        "productTitle": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "integer"
+        },
+        "price": {
+          "type": "number"
+        }
+      },
+      "required": ["productTitle", "amount", "price"]
+    }
+  }
+}
