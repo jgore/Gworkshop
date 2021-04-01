@@ -10,7 +10,7 @@ public class Workshop {
 
     @Id
     private String id;
-    private Integer nip;
+    private String nip;
     private String name;
 
     private PhotoAlbum photoAlbum;
@@ -23,7 +23,7 @@ public class Workshop {
         ACTIVE, INACTIVE, SUSPENDED
     }
 
-    public Workshop(String id, Integer nip, String name, PhotoAlbum photoAlbum, Address address) {
+    public Workshop(String id, String nip, String name, PhotoAlbum photoAlbum, Address address) {
         this.id = id;
         this.nip = nip;
         this.name = name;
@@ -44,7 +44,7 @@ public class Workshop {
         return id;
     }
 
-    public Integer getNip() {
+    public String getNip() {
         return nip;
     }
 

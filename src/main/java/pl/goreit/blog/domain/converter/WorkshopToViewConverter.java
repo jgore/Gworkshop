@@ -20,9 +20,8 @@ public class WorkshopToViewConverter  implements Converter<Workshop, WorkshopVie
 
     @Override
     public WorkshopView convert(Workshop workshop) {
-        WorkshopView workshopView = new WorkshopView(workshop.getNip(),
+        return new WorkshopView(workshop.getNip(),
                 workshop.getName(),
                 conversionService.convert(workshop.getAddress(), AddressView.class));
-        return null;
     }
 }

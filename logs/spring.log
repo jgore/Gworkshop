@@ -167,3 +167,540 @@
 2021-04-01 14:49:06.646  INFO 70055 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
 2021-04-01 14:49:07.097  WARN 70055 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /
 2021-04-01 14:49:07.117  WARN 70055 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /csrf
+2021-04-01 15:19:24.240  INFO 76755 --- [main] pl.goreit.blog.GoreIT                    : Starting GoreIT on goreit-pc with PID 76755 (/home/goreit/projects/gworkshop/build/classes/java/main started by goreit in /home/goreit/projects/gworkshop)
+2021-04-01 15:19:24.242  INFO 76755 --- [main] pl.goreit.blog.GoreIT                    : The following profiles are active: local
+2021-04-01 15:19:24.987  INFO 76755 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:19:24.988  INFO 76755 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-04-01 15:19:25.046  INFO 76755 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 6 MongoDB repository interfaces.
+2021-04-01 15:19:25.052  INFO 76755 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:19:25.052  INFO 76755 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-04-01 15:19:25.062  INFO 76755 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.AccountRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:19:25.063  INFO 76755 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.MessageRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:19:25.064  INFO 76755 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.OrderRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:19:25.064  INFO 76755 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.PhotoAlbumRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:19:25.064  INFO 76755 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.ProductRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:19:25.065  INFO 76755 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.WorkshopRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:19:25.065  INFO 76755 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Solr repository interfaces.
+2021-04-01 15:19:25.653  INFO 76755 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 15:19:25.661  INFO 76755 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 15:19:25.661  INFO 76755 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-04-01 15:19:25.715  INFO 76755 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 15:19:25.716  INFO 76755 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1434 ms
+2021-04-01 15:19:26.054  INFO 76755 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2021-04-01 15:19:26.054  INFO 76755 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2021-04-01 15:19:26.108  INFO 76755 --- [cluster-ClusterId{value='6065c85e64f5b9658b05ee7c', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:39}] to localhost:27017
+2021-04-01 15:19:26.112  INFO 76755 --- [cluster-ClusterId{value='6065c85e64f5b9658b05ee7c', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2364358}
+2021-04-01 15:19:26.112  INFO 76755 --- [cluster-ClusterId{value='6065c85e64f5b9658b05ee7c', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2021-04-01 15:19:26.250  WARN 76755 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2021-04-01 15:19:26.418  INFO 76755 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:40}] to localhost:27017
+2021-04-01 15:19:27.353  INFO 76755 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-01 15:19:27.410  INFO 76755 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-01 15:19:27.510  INFO 76755 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ffb0d10, org.springframework.security.web.context.SecurityContextPersistenceFilter@71fb8301, org.springframework.security.web.header.HeaderWriterFilter@1c90029b, org.springframework.security.web.authentication.logout.LogoutFilter@311a0b3e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6f6c8d45, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18db3b3c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65d7eea4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3982206a, org.springframework.security.web.session.SessionManagementFilter@44492c06, org.springframework.security.web.access.ExceptionTranslationFilter@254e9709, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6de84336]
+2021-04-01 15:19:27.516  INFO 76755 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'threadPoolTaskScheduler'
+2021-04-01 15:19:27.720  INFO 76755 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-01 15:19:27.734  INFO 76755 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-01 15:19:27.756  INFO 76755 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-01 15:19:27.976  INFO 76755 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-04-01 15:19:27.977  INFO 76755 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-04-01 15:19:28.009  INFO 76755 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addOrderUsingPOST_1
+2021-04-01 15:19:28.045  INFO 76755 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-01 15:19:28.047  INFO 76755 --- [main] pl.goreit.blog.GoreIT                    : Started GoreIT in 4.143 seconds (JVM running for 4.388)
+2021-04-01 15:19:53.098  INFO 76755 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-01 15:19:53.098  INFO 76755 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-01 15:19:53.103  INFO 76755 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-04-01 15:19:53.748  WARN 76755 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2021-04-01 15:19:53.766  WARN 76755 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /csrf
+2021-04-01 15:29:54.847  INFO 79129 --- [main] pl.goreit.blog.GoreIT                    : Starting GoreIT on goreit-pc with PID 79129 (/home/goreit/projects/gworkshop/build/classes/java/main started by goreit in /home/goreit/projects/gworkshop)
+2021-04-01 15:29:54.849  INFO 79129 --- [main] pl.goreit.blog.GoreIT                    : The following profiles are active: local
+2021-04-01 15:29:55.535  INFO 79129 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:29:55.536  INFO 79129 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-04-01 15:29:55.588  INFO 79129 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 6 MongoDB repository interfaces.
+2021-04-01 15:29:55.596  INFO 79129 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:29:55.597  INFO 79129 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-04-01 15:29:55.607  INFO 79129 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.AccountRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:29:55.608  INFO 79129 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.MessageRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:29:55.608  INFO 79129 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.OrderRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:29:55.608  INFO 79129 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.PhotoAlbumRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:29:55.609  INFO 79129 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.ProductRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:29:55.609  INFO 79129 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.WorkshopRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:29:55.609  INFO 79129 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Solr repository interfaces.
+2021-04-01 15:29:56.218  INFO 79129 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 15:29:56.226  INFO 79129 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 15:29:56.226  INFO 79129 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-04-01 15:29:56.276  INFO 79129 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 15:29:56.276  INFO 79129 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1391 ms
+2021-04-01 15:29:56.589  INFO 79129 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2021-04-01 15:29:56.590  INFO 79129 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2021-04-01 15:29:56.633  INFO 79129 --- [cluster-ClusterId{value='6065cad4c625ed52328d4ba2', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:41}] to localhost:27017
+2021-04-01 15:29:56.636  INFO 79129 --- [cluster-ClusterId{value='6065cad4c625ed52328d4ba2', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1854904}
+2021-04-01 15:29:56.637  INFO 79129 --- [cluster-ClusterId{value='6065cad4c625ed52328d4ba2', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2021-04-01 15:29:56.766  WARN 79129 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2021-04-01 15:29:56.855  INFO 79129 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:42}] to localhost:27017
+2021-04-01 15:29:57.750  INFO 79129 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-01 15:29:57.817  INFO 79129 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-01 15:29:57.901  INFO 79129 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e9fb485, org.springframework.security.web.context.SecurityContextPersistenceFilter@18db3b3c, org.springframework.security.web.header.HeaderWriterFilter@b0d3e7, org.springframework.security.web.authentication.logout.LogoutFilter@21abda60, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@79d49790, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c4057f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6076c66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f3fec43, org.springframework.security.web.session.SessionManagementFilter@c94bd18, org.springframework.security.web.access.ExceptionTranslationFilter@147c00aa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70543cae]
+2021-04-01 15:29:57.907  INFO 79129 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'threadPoolTaskScheduler'
+2021-04-01 15:29:58.116  INFO 79129 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-01 15:29:58.129  INFO 79129 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-01 15:29:58.152  INFO 79129 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-01 15:29:58.376  INFO 79129 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-04-01 15:29:58.377  INFO 79129 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-04-01 15:29:58.406  INFO 79129 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addOrderUsingPOST_1
+2021-04-01 15:29:58.455  INFO 79129 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-01 15:29:58.456  INFO 79129 --- [main] pl.goreit.blog.GoreIT                    : Started GoreIT in 3.909 seconds (JVM running for 4.152)
+2021-04-01 15:29:59.332  INFO 79129 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-01 15:29:59.332  INFO 79129 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-01 15:29:59.337  INFO 79129 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-04-01 15:29:59.808  WARN 79129 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2021-04-01 15:29:59.824  WARN 79129 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /csrf
+2021-04-01 15:31:48.057  INFO 79678 --- [main] pl.goreit.blog.GoreIT                    : Starting GoreIT on goreit-pc with PID 79678 (/home/goreit/projects/gworkshop/build/classes/java/main started by goreit in /home/goreit/projects/gworkshop)
+2021-04-01 15:31:48.058  INFO 79678 --- [main] pl.goreit.blog.GoreIT                    : The following profiles are active: local
+2021-04-01 15:31:48.770  INFO 79678 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:31:48.771  INFO 79678 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-04-01 15:31:48.828  INFO 79678 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53ms. Found 6 MongoDB repository interfaces.
+2021-04-01 15:31:48.833  INFO 79678 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:31:48.834  INFO 79678 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-04-01 15:31:48.842  INFO 79678 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.AccountRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:31:48.843  INFO 79678 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.MessageRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:31:48.843  INFO 79678 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.OrderRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:31:48.843  INFO 79678 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.PhotoAlbumRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:31:48.844  INFO 79678 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.ProductRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:31:48.844  INFO 79678 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.WorkshopRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:31:48.844  INFO 79678 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-04-01 15:31:49.463  INFO 79678 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 15:31:49.473  INFO 79678 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 15:31:49.473  INFO 79678 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-04-01 15:31:49.531  INFO 79678 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 15:31:49.532  INFO 79678 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1440 ms
+2021-04-01 15:31:49.853  INFO 79678 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2021-04-01 15:31:49.853  INFO 79678 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2021-04-01 15:31:49.893  INFO 79678 --- [cluster-ClusterId{value='6065cb453591c23a5177da8e', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:45}] to localhost:27017
+2021-04-01 15:31:49.896  INFO 79678 --- [cluster-ClusterId{value='6065cb453591c23a5177da8e', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1914866}
+2021-04-01 15:31:49.897  INFO 79678 --- [cluster-ClusterId{value='6065cb453591c23a5177da8e', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2021-04-01 15:31:50.015  WARN 79678 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2021-04-01 15:31:50.097  INFO 79678 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:46}] to localhost:27017
+2021-04-01 15:31:50.995  INFO 79678 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-01 15:31:51.071  INFO 79678 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-01 15:31:51.161  INFO 79678 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7752c0e7, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b5f8e61, org.springframework.security.web.header.HeaderWriterFilter@55e42684, org.springframework.security.web.authentication.logout.LogoutFilter@15e5246, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@61e14b53, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73b0ed03, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6068ebb2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77ba583, org.springframework.security.web.session.SessionManagementFilter@38ef1a0a, org.springframework.security.web.access.ExceptionTranslationFilter@71e7830a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@370a8b6e]
+2021-04-01 15:31:51.169  INFO 79678 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'threadPoolTaskScheduler'
+2021-04-01 15:31:51.416  INFO 79678 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-01 15:31:51.434  INFO 79678 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-01 15:31:51.464  INFO 79678 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-01 15:31:51.715  INFO 79678 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-04-01 15:31:51.718  INFO 79678 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-04-01 15:31:51.759  INFO 79678 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addOrderUsingPOST_1
+2021-04-01 15:31:51.821  INFO 79678 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-01 15:31:51.823  INFO 79678 --- [main] pl.goreit.blog.GoreIT                    : Started GoreIT in 4.091 seconds (JVM running for 4.346)
+2021-04-01 15:31:55.610  INFO 79678 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-01 15:31:55.610  INFO 79678 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-01 15:31:55.615  INFO 79678 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-04-01 15:32:58.935  INFO 80146 --- [main] pl.goreit.blog.GoreIT                    : Starting GoreIT on goreit-pc with PID 80146 (/home/goreit/projects/gworkshop/build/classes/java/main started by goreit in /home/goreit/projects/gworkshop)
+2021-04-01 15:32:58.937  INFO 80146 --- [main] pl.goreit.blog.GoreIT                    : The following profiles are active: local
+2021-04-01 15:32:59.569  INFO 80146 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:32:59.570  INFO 80146 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-04-01 15:32:59.616  INFO 80146 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 6 MongoDB repository interfaces.
+2021-04-01 15:32:59.621  INFO 80146 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:32:59.621  INFO 80146 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-04-01 15:32:59.629  INFO 80146 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.AccountRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:32:59.629  INFO 80146 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.MessageRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:32:59.630  INFO 80146 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.OrderRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:32:59.630  INFO 80146 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.PhotoAlbumRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:32:59.630  INFO 80146 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.ProductRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:32:59.631  INFO 80146 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.WorkshopRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:32:59.631  INFO 80146 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-04-01 15:33:00.203  INFO 80146 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 15:33:00.211  INFO 80146 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 15:33:00.211  INFO 80146 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-04-01 15:33:00.258  INFO 80146 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 15:33:00.258  INFO 80146 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1286 ms
+2021-04-01 15:33:00.554  INFO 80146 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2021-04-01 15:33:00.554  INFO 80146 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2021-04-01 15:33:00.598  INFO 80146 --- [cluster-ClusterId{value='6065cb8c5a5dd04d071d483f', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:47}] to localhost:27017
+2021-04-01 15:33:00.602  INFO 80146 --- [cluster-ClusterId{value='6065cb8c5a5dd04d071d483f', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2981207}
+2021-04-01 15:33:00.603  INFO 80146 --- [cluster-ClusterId{value='6065cb8c5a5dd04d071d483f', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2021-04-01 15:33:00.716  WARN 80146 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2021-04-01 15:33:00.834  INFO 80146 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:48}] to localhost:27017
+2021-04-01 15:33:01.711  INFO 80146 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-01 15:33:01.771  INFO 80146 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-01 15:33:01.875  INFO 80146 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@252c6cdb, org.springframework.security.web.context.SecurityContextPersistenceFilter@11ad095c, org.springframework.security.web.header.HeaderWriterFilter@5a82bc58, org.springframework.security.web.authentication.logout.LogoutFilter@550fa96f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@47f0f414, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d537616, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@628962e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61c87f1b, org.springframework.security.web.session.SessionManagementFilter@15f519f7, org.springframework.security.web.access.ExceptionTranslationFilter@3c27f72, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48277712]
+2021-04-01 15:33:01.881  INFO 80146 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'threadPoolTaskScheduler'
+2021-04-01 15:33:02.097  INFO 80146 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-01 15:33:02.111  INFO 80146 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-01 15:33:02.135  INFO 80146 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-01 15:33:02.334  INFO 80146 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-04-01 15:33:02.335  INFO 80146 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-04-01 15:33:02.363  INFO 80146 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addOrderUsingPOST_1
+2021-04-01 15:33:02.403  INFO 80146 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-01 15:33:02.404  INFO 80146 --- [main] pl.goreit.blog.GoreIT                    : Started GoreIT in 3.798 seconds (JVM running for 4.041)
+2021-04-01 15:33:05.004  INFO 80146 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-01 15:33:05.004  INFO 80146 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-01 15:33:05.010  INFO 80146 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2021-04-01 15:33:05.165  WARN 80146 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public pl.goreit.api.generated.workshop.WorkshopView pl.goreit.blog.api.WorkshopController.add(pl.goreit.api.generated.workshop.AddWorkshopRequest)]
+2021-04-01 15:33:10.318  WARN 80146 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public pl.goreit.api.generated.workshop.WorkshopView pl.goreit.blog.api.WorkshopController.add(pl.goreit.api.generated.workshop.AddWorkshopRequest)]
+2021-04-01 15:33:26.924  WARN 80146 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2021-04-01 15:33:26.932  WARN 80146 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /csrf
+2021-04-01 15:36:20.469  INFO 80945 --- [main] pl.goreit.blog.GoreIT                    : Starting GoreIT on goreit-pc with PID 80945 (/home/goreit/projects/gworkshop/build/classes/java/main started by goreit in /home/goreit/projects/gworkshop)
+2021-04-01 15:36:20.471  INFO 80945 --- [main] pl.goreit.blog.GoreIT                    : The following profiles are active: local
+2021-04-01 15:36:21.148  INFO 80945 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:36:21.149  INFO 80945 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-04-01 15:36:21.197  INFO 80945 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45ms. Found 6 MongoDB repository interfaces.
+2021-04-01 15:36:21.202  INFO 80945 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:36:21.203  INFO 80945 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-04-01 15:36:21.211  INFO 80945 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.AccountRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:21.211  INFO 80945 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.MessageRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:21.212  INFO 80945 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.OrderRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:21.212  INFO 80945 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.PhotoAlbumRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:21.213  INFO 80945 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.ProductRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:21.213  INFO 80945 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.WorkshopRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:21.213  INFO 80945 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Solr repository interfaces.
+2021-04-01 15:36:21.789  INFO 80945 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 15:36:21.796  INFO 80945 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 15:36:21.796  INFO 80945 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-04-01 15:36:21.840  INFO 80945 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 15:36:21.840  INFO 80945 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1339 ms
+2021-04-01 15:36:22.130  INFO 80945 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2021-04-01 15:36:22.131  INFO 80945 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2021-04-01 15:36:22.180  INFO 80945 --- [cluster-ClusterId{value='6065cc564a95fa024411aede', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:49}] to localhost:27017
+2021-04-01 15:36:22.184  INFO 80945 --- [cluster-ClusterId{value='6065cc564a95fa024411aede', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2539633}
+2021-04-01 15:36:22.185  INFO 80945 --- [cluster-ClusterId{value='6065cc564a95fa024411aede', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2021-04-01 15:36:22.290  WARN 80945 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2021-04-01 15:36:22.420  INFO 80945 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:50}] to localhost:27017
+2021-04-01 15:36:23.315  INFO 80945 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-01 15:36:23.367  INFO 80945 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-01 15:36:23.466  INFO 80945 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59371066, org.springframework.security.web.context.SecurityContextPersistenceFilter@6076c66, org.springframework.security.web.header.HeaderWriterFilter@71fb8301, org.springframework.security.web.authentication.logout.LogoutFilter@401ec794, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@38dbeb39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1224e1b6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20faaf77, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48106381, org.springframework.security.web.session.SessionManagementFilter@2f99d8c, org.springframework.security.web.access.ExceptionTranslationFilter@44492c06, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@cf10c92]
+2021-04-01 15:36:23.472  INFO 80945 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'threadPoolTaskScheduler'
+2021-04-01 15:36:23.702  INFO 80945 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-01 15:36:23.715  INFO 80945 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-01 15:36:23.740  INFO 80945 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-01 15:36:30.975  INFO 81114 --- [main] pl.goreit.blog.GoreIT                    : Starting GoreIT on goreit-pc with PID 81114 (/home/goreit/projects/gworkshop/build/classes/java/main started by goreit in /home/goreit/projects/gworkshop)
+2021-04-01 15:36:30.977  INFO 81114 --- [main] pl.goreit.blog.GoreIT                    : The following profiles are active: local
+2021-04-01 15:36:31.631  INFO 81114 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:36:31.631  INFO 81114 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-04-01 15:36:31.677  INFO 81114 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42ms. Found 6 MongoDB repository interfaces.
+2021-04-01 15:36:31.681  INFO 81114 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:36:31.681  INFO 81114 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-04-01 15:36:31.689  INFO 81114 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.AccountRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:31.690  INFO 81114 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.MessageRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:31.690  INFO 81114 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.OrderRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:31.690  INFO 81114 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.PhotoAlbumRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:31.691  INFO 81114 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.ProductRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:31.691  INFO 81114 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.WorkshopRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:36:31.691  INFO 81114 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-04-01 15:36:32.242  INFO 81114 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 15:36:32.250  INFO 81114 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 15:36:32.250  INFO 81114 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-04-01 15:36:32.299  INFO 81114 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 15:36:32.299  INFO 81114 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1285 ms
+2021-04-01 15:36:32.598  INFO 81114 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2021-04-01 15:36:32.599  INFO 81114 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2021-04-01 15:36:32.638  INFO 81114 --- [cluster-ClusterId{value='6065cc600c071a1e88a5cb0a', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:51}] to localhost:27017
+2021-04-01 15:36:32.642  INFO 81114 --- [cluster-ClusterId{value='6065cc600c071a1e88a5cb0a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2243229}
+2021-04-01 15:36:32.643  INFO 81114 --- [cluster-ClusterId{value='6065cc600c071a1e88a5cb0a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2021-04-01 15:36:32.760  WARN 81114 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2021-04-01 15:36:32.838  INFO 81114 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:52}] to localhost:27017
+2021-04-01 15:36:33.740  INFO 81114 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-01 15:36:33.811  INFO 81114 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-01 15:36:33.886  INFO 81114 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3982206a, org.springframework.security.web.context.SecurityContextPersistenceFilter@7cdfa824, org.springframework.security.web.header.HeaderWriterFilter@4db728df, org.springframework.security.web.authentication.logout.LogoutFilter@3de8f85c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f2ca6f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@318e3942, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d37aa0f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e9fb485, org.springframework.security.web.session.SessionManagementFilter@5c4714ef, org.springframework.security.web.access.ExceptionTranslationFilter@350f18a6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@627bcd7e]
+2021-04-01 15:36:33.893  INFO 81114 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'threadPoolTaskScheduler'
+2021-04-01 15:36:34.104  INFO 81114 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-01 15:36:34.118  INFO 81114 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-01 15:36:34.143  INFO 81114 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-01 15:36:34.365  INFO 81114 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-04-01 15:36:34.366  INFO 81114 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-04-01 15:36:34.394  INFO 81114 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addOrderUsingPOST_1
+2021-04-01 15:36:34.434  INFO 81114 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-01 15:36:34.435  INFO 81114 --- [main] pl.goreit.blog.GoreIT                    : Started GoreIT in 3.795 seconds (JVM running for 4.026)
+2021-04-01 15:36:37.581  INFO 81114 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-01 15:36:37.581  INFO 81114 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-01 15:36:37.587  INFO 81114 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2021-04-01 15:37:00.123  WARN 81114 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2021-04-01 15:37:00.137  WARN 81114 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /csrf
+2021-04-01 15:38:06.115  INFO 81619 --- [main] pl.goreit.blog.GoreIT                    : Starting GoreIT on goreit-pc with PID 81619 (/home/goreit/projects/gworkshop/build/classes/java/main started by goreit in /home/goreit/projects/gworkshop)
+2021-04-01 15:38:06.117  INFO 81619 --- [main] pl.goreit.blog.GoreIT                    : The following profiles are active: local
+2021-04-01 15:38:06.748  INFO 81619 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:38:06.749  INFO 81619 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-04-01 15:38:06.800  INFO 81619 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47ms. Found 6 MongoDB repository interfaces.
+2021-04-01 15:38:06.807  INFO 81619 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:38:06.807  INFO 81619 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-04-01 15:38:06.815  INFO 81619 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.AccountRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:38:06.816  INFO 81619 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.MessageRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:38:06.816  INFO 81619 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.OrderRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:38:06.816  INFO 81619 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.PhotoAlbumRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:38:06.817  INFO 81619 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.ProductRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:38:06.817  INFO 81619 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.WorkshopRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:38:06.817  INFO 81619 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 Solr repository interfaces.
+2021-04-01 15:38:07.359  INFO 81619 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 15:38:07.367  INFO 81619 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 15:38:07.367  INFO 81619 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-04-01 15:38:07.412  INFO 81619 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 15:38:07.412  INFO 81619 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1266 ms
+2021-04-01 15:38:07.705  INFO 81619 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2021-04-01 15:38:07.705  INFO 81619 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2021-04-01 15:38:07.746  INFO 81619 --- [cluster-ClusterId{value='6065ccbfc5837e54d1e9463a', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:53}] to localhost:27017
+2021-04-01 15:38:07.749  INFO 81619 --- [cluster-ClusterId{value='6065ccbfc5837e54d1e9463a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1947748}
+2021-04-01 15:38:07.749  INFO 81619 --- [cluster-ClusterId{value='6065ccbfc5837e54d1e9463a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2021-04-01 15:38:07.875  WARN 81619 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2021-04-01 15:38:08.012  INFO 81619 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:54}] to localhost:27017
+2021-04-01 15:38:08.887  INFO 81619 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-01 15:38:08.958  INFO 81619 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-01 15:38:09.036  INFO 81619 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8f4b803, org.springframework.security.web.context.SecurityContextPersistenceFilter@f48a080, org.springframework.security.web.header.HeaderWriterFilter@794cb26b, org.springframework.security.web.authentication.logout.LogoutFilter@139089a4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1b60d324, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@401ec794, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@277bc3a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42f9873e, org.springframework.security.web.session.SessionManagementFilter@69a73867, org.springframework.security.web.access.ExceptionTranslationFilter@3d53e876, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48106381]
+2021-04-01 15:38:09.043  INFO 81619 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'threadPoolTaskScheduler'
+2021-04-01 15:38:09.246  INFO 81619 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-01 15:38:09.259  INFO 81619 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-01 15:38:09.283  INFO 81619 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-01 15:38:09.512  INFO 81619 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-04-01 15:38:09.513  INFO 81619 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-04-01 15:38:09.545  INFO 81619 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addOrderUsingPOST_1
+2021-04-01 15:38:09.586  INFO 81619 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-01 15:38:09.588  INFO 81619 --- [main] pl.goreit.blog.GoreIT                    : Started GoreIT in 3.766 seconds (JVM running for 4.0)
+2021-04-01 15:38:10.957  INFO 81619 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-01 15:38:10.958  INFO 81619 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-01 15:38:10.963  INFO 81619 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-04-01 15:40:08.125  INFO 82386 --- [main] pl.goreit.blog.GoreIT                    : Starting GoreIT on goreit-pc with PID 82386 (/home/goreit/projects/gworkshop/build/classes/java/main started by goreit in /home/goreit/projects/gworkshop)
+2021-04-01 15:40:08.127  INFO 82386 --- [main] pl.goreit.blog.GoreIT                    : The following profiles are active: local
+2021-04-01 15:40:08.811  INFO 82386 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:40:08.812  INFO 82386 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-04-01 15:40:08.859  INFO 82386 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 6 MongoDB repository interfaces.
+2021-04-01 15:40:08.865  INFO 82386 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:40:08.866  INFO 82386 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-04-01 15:40:08.874  INFO 82386 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.AccountRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:08.875  INFO 82386 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.MessageRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:08.875  INFO 82386 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.OrderRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:08.875  INFO 82386 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.PhotoAlbumRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:08.875  INFO 82386 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.ProductRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:08.876  INFO 82386 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.WorkshopRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:08.876  INFO 82386 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Solr repository interfaces.
+2021-04-01 15:40:09.430  INFO 82386 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 15:40:09.438  INFO 82386 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 15:40:09.438  INFO 82386 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-04-01 15:40:09.488  INFO 82386 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 15:40:09.489  INFO 82386 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1326 ms
+2021-04-01 15:40:09.851  INFO 82386 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2021-04-01 15:40:09.851  INFO 82386 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2021-04-01 15:40:09.895  INFO 82386 --- [cluster-ClusterId{value='6065cd396503641d8bf54301', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:55}] to localhost:27017
+2021-04-01 15:40:09.898  INFO 82386 --- [cluster-ClusterId{value='6065cd396503641d8bf54301', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1953980}
+2021-04-01 15:40:09.899  INFO 82386 --- [cluster-ClusterId{value='6065cd396503641d8bf54301', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2021-04-01 15:40:10.034  WARN 82386 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2021-04-01 15:40:10.111  INFO 82386 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:56}] to localhost:27017
+2021-04-01 15:40:10.985  INFO 82386 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-01 15:40:11.060  INFO 82386 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-01 15:40:11.138  INFO 82386 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e9fb485, org.springframework.security.web.context.SecurityContextPersistenceFilter@18db3b3c, org.springframework.security.web.header.HeaderWriterFilter@b0d3e7, org.springframework.security.web.authentication.logout.LogoutFilter@21abda60, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@79d49790, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c4057f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6076c66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f3fec43, org.springframework.security.web.session.SessionManagementFilter@c94bd18, org.springframework.security.web.access.ExceptionTranslationFilter@147c00aa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70543cae]
+2021-04-01 15:40:11.144  INFO 82386 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'threadPoolTaskScheduler'
+2021-04-01 15:40:11.359  INFO 82386 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-01 15:40:11.372  INFO 82386 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-01 15:40:11.398  INFO 82386 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-01 15:40:11.615  INFO 82386 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-04-01 15:40:11.617  INFO 82386 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-04-01 15:40:11.651  INFO 82386 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addOrderUsingPOST_1
+2021-04-01 15:40:11.690  INFO 82386 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-01 15:40:11.693  WARN 82386 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-ClusterId{value='6065cd396503641d8bf54301', description='null'}-localhost:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForSignalOrTimeout(DefaultServerMonitor.java:229)
+ com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForNext(DefaultServerMonitor.java:210)
+ com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+ java.lang.Thread.run(Thread.java:748)
+2021-04-01 15:40:11.694  WARN 82386 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [CleanCursors-1-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2021-04-01 15:40:11.694  WARN 82386 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Connection evictor] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Thread.sleep(Native Method)
+ org.apache.http.impl.client.IdleConnectionEvictor$1.run(IdleConnectionEvictor.java:66)
+ java.lang.Thread.run(Thread.java:748)
+2021-04-01 15:40:11.697  INFO 82386 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-01 15:40:11.698 ERROR 82386 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2021-04-01 15:40:11.704  WARN 82386 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'tomcatMetricsBinder': java.lang.NullPointerException
+2021-04-01 15:40:11.705  INFO 82386 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'threadPoolTaskScheduler'
+2021-04-01 15:40:11.710  INFO 82386 --- [main] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:56}] to localhost:27017 because the pool has been closed.
+2021-04-01 15:40:47.643  INFO 82799 --- [main] pl.goreit.blog.GoreIT                    : Starting GoreIT on goreit-pc with PID 82799 (/home/goreit/projects/gworkshop/build/classes/java/main started by goreit in /home/goreit/projects/gworkshop)
+2021-04-01 15:40:47.646  INFO 82799 --- [main] pl.goreit.blog.GoreIT                    : The following profiles are active: local
+2021-04-01 15:40:48.323  INFO 82799 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:40:48.324  INFO 82799 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-04-01 15:40:48.381  INFO 82799 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 6 MongoDB repository interfaces.
+2021-04-01 15:40:48.387  INFO 82799 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-01 15:40:48.388  INFO 82799 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Solr repositories in DEFAULT mode.
+2021-04-01 15:40:48.397  INFO 82799 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.AccountRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:48.397  INFO 82799 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.MessageRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:48.398  INFO 82799 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.OrderRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:48.398  INFO 82799 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.PhotoAlbumRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:48.399  INFO 82799 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.ProductRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:48.399  INFO 82799 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Solr - Could not safely identify store assignment for repository candidate interface pl.goreit.blog.infrastructure.mongo.WorkshopRepo. If you want this repository to be a Solr repository, consider annotating your entities with one of these annotations: org.springframework.data.solr.core.mapping.SolrDocument (preferred), or consider extending one of the following types with your repository: org.springframework.data.solr.repository.SolrRepository, org.springframework.data.solr.repository.SolrCrudRepository.
+2021-04-01 15:40:48.399  INFO 82799 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Solr repository interfaces.
+2021-04-01 15:40:49.074  INFO 82799 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-01 15:40:49.082  INFO 82799 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-01 15:40:49.083  INFO 82799 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2021-04-01 15:40:49.140  INFO 82799 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-01 15:40:49.141  INFO 82799 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1465 ms
+2021-04-01 15:40:49.458  INFO 82799 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2021-04-01 15:40:49.458  INFO 82799 --- [main] org.mongodb.driver.cluster               : Adding discovered server localhost:27017 to client view of cluster
+2021-04-01 15:40:49.498  INFO 82799 --- [cluster-ClusterId{value='6065cd61ab622b582d247bb7', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:57}] to localhost:27017
+2021-04-01 15:40:49.501  INFO 82799 --- [cluster-ClusterId{value='6065cd61ab622b582d247bb7', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 0]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1856840}
+2021-04-01 15:40:49.501  INFO 82799 --- [cluster-ClusterId{value='6065cd61ab622b582d247bb7', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2021-04-01 15:40:49.661  WARN 82799 --- [main] .m.c.i.MongoPersistentEntityIndexCreator : Automatic index creation will be disabled by default as of Spring Data MongoDB 3.x.
+	Please use 'MongoMappingContext#setAutoIndexCreation(boolean)' or override 'MongoConfigurationSupport#autoIndexCreation()' to be explicit.
+	However, we recommend setting up indices manually in an application ready block. You may use index derivation there as well.
+
+	> -----------------------------------------------------------------------------------------
+	> @EventListener(ApplicationReadyEvent.class)
+	> public void initIndicesAfterStartup() {
+	>
+	>     IndexOperations indexOps = mongoTemplate.indexOps(DomainType.class);
+	>
+	>     IndexResolver resolver = new MongoPersistentEntityIndexResolver(mongoMappingContext);
+	>     resolver.resolveIndexFor(DomainType.class).forEach(indexOps::ensureIndex);
+	> }
+	> -----------------------------------------------------------------------------------------
+
+2021-04-01 15:40:49.767  INFO 82799 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:58}] to localhost:27017
+2021-04-01 15:40:50.639  INFO 82799 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-01 15:40:50.711  INFO 82799 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-01 15:40:50.789  INFO 82799 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c18ee69, org.springframework.security.web.context.SecurityContextPersistenceFilter@70c56434, org.springframework.security.web.header.HeaderWriterFilter@60f9dc7e, org.springframework.security.web.authentication.logout.LogoutFilter@5cbe95b1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@71fb8301, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@632d4cf2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b9a1205, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f99d8c, org.springframework.security.web.session.SessionManagementFilter@14590fe2, org.springframework.security.web.access.ExceptionTranslationFilter@4fa5cc73, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3de56885]
+2021-04-01 15:40:50.796  INFO 82799 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'threadPoolTaskScheduler'
+2021-04-01 15:40:51.005  INFO 82799 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-01 15:40:51.018  INFO 82799 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-01 15:40:51.043  INFO 82799 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-01 15:40:51.255  INFO 82799 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-04-01 15:40:51.257  INFO 82799 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-04-01 15:40:51.291  INFO 82799 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addOrderUsingPOST_1
+2021-04-01 15:40:51.335  INFO 82799 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-01 15:40:51.337  INFO 82799 --- [main] pl.goreit.blog.GoreIT                    : Started GoreIT in 4.018 seconds (JVM running for 4.251)
+2021-04-01 15:40:53.676  INFO 82799 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-01 15:40:53.677  INFO 82799 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-01 15:40:53.683  INFO 82799 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2021-04-01 15:40:54.148  WARN 82799 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2021-04-01 15:40:54.164  WARN 82799 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /csrf
