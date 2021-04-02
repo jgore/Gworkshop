@@ -1,15 +1,31 @@
-# GoreIT_SHOP
+# gWorkshop
 
 Cel Projektu 
 
-0) Umożliwienie dodania nowego produktu
-0.1) Umożliwienie wyswietlenia listy produktów
-1) Umożliwienie sprzedaży KUP TERAZ przedmiotów użytkowników. ( pozniej licytacji )
-2) Wydruk faktury
-3) Historia zamówień
-4) Wsparcie/Kontakt
+Klient -> warsztat
 
-W pierwszej kolejności można SPRZEDAWAĆ Korepetycje
+0) Umożliwienie zamawiania uslug warszatowych online
+0.1) Umożliwienie wyswietlenia listy uslug danego warsztata
+1) Umożliwienie sprzedaży uslugi serwisowej
+1.01 Umozliwienie wyswietlenie szczegolow uslugi serwisowej
+1.1 Wyswietlenie listy wolnych terminow warsztatu i wybranie
+1.2) Wydruk faktury z zamowienia
+1.3 Anulowanie zamowienia
+
+Konto warsztatu
+
+1) CRUD uslugi serwisowej
+2) CRUD pracownikow warsztatu
+3) TimeSheet dla pracownikow - 8-16 
+4) wydruk timesheeta dla pracownika
+
+Konto klienta
+0) Zamowienie uslugi w warsztacie
+1) Historia zamówień
+2) Anulowanie wizyty
+3) Dane samochodu 
+
+
 
 Technologie : 
 
@@ -18,14 +34,3 @@ spring boot, spring-data, hibernate \
 postgresSQL, mongodb, liquibase \
 gradle
 
-Aplikacja posiada liste produktow.
-
-Lista produktow jest rowniez importowana z zewnetrznego serwisu. 
-
-Kazdy product ma swoja kategorie w ktorej jest wyswietlony.
-
-Dodatkowo mozna stworzyc zamowienie na produkty ( order -> orderLines )
-
-Przeglądać historie zamówień
-
-cdn ...
