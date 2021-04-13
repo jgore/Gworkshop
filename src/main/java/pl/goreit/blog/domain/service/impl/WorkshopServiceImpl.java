@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import pl.goreit.api.generated.workshop.AddWorkshopRequest;
 import pl.goreit.api.generated.workshop.WorkshopView;
 import pl.goreit.blog.domain.model.Address;
+import pl.goreit.blog.domain.model.Mechanic;
 import pl.goreit.blog.domain.model.Workshop;
 import pl.goreit.blog.domain.service.WorkshopService;
 import pl.goreit.blog.infrastructure.mongo.WorkshopRepo;
@@ -33,11 +34,14 @@ public class WorkshopServiceImpl implements WorkshopService {
     public WorkshopView add(AddWorkshopRequest addWorkshopRequest) {
         Workshop workshop = new Workshop(
                 UUID.randomUUID().toString(),
-                addWorkshopRequest.getNip(),
                 addWorkshopRequest.getName(),
+                addWorkshopRequest.getMechanicList()
+                        .stream()
+                        .map(mechanic -> conversionService.convert(mechanic, Mechanic.class))
+                        .collect(Collectors.toList()),
                 null,
-                conversionService.convert(addWorkshopRequest.getAddress(), Address.class)
-        );
+                conversionService.convert(addWorkshopRequest.getAddress(), Address.class),
+                addWorkshopRequest.getNip());
         Workshop persisted = workshopRepo.save(workshop);
         return conversionService.convert(persisted, WorkshopView.class);
     }

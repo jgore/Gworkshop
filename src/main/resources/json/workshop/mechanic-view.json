@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "login": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "pesel": {
+      "type": "string"
+    }
+  }
+}

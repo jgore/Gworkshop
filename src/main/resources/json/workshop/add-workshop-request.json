@@ -7,6 +7,12 @@
     "name": {
       "type": "string"
     },
+    "mechanicList": {
+      "type": "array",
+      "items": {
+        "$ref": "mechanic-view.json"
+      }
+    },
     "address": {
       "$ref": "address-view.json"
     }

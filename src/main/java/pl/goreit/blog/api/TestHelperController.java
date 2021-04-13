@@ -7,9 +7,12 @@ import org.springframework.web.bind.annotation.*;
 import pl.goreit.api.generated.CreateOrderRequest;
 import pl.goreit.api.generated.OrderLineRequest;
 import pl.goreit.api.generated.OrderResponse;
+import pl.goreit.api.generated.workshop.AddWorkshopRequest;
+import pl.goreit.api.generated.workshop.WorkshopView;
 import pl.goreit.blog.domain.DomainException;
 import pl.goreit.blog.domain.model.Product;
 import pl.goreit.blog.domain.service.OrderService;
+import pl.goreit.blog.domain.service.WorkshopService;
 import pl.goreit.blog.infrastructure.mongo.ProductRepo;
 
 import java.math.BigDecimal;
@@ -26,6 +29,17 @@ public class TestHelperController {
 
     @Autowired
     private OrderService orderService;
+
+    @Autowired
+    private WorkshopService workshopService;
+
+    @PostMapping("addwWorkshops")
+    @ApiOperation(value = "add workshops 10")
+    public void addWorkshops(@RequestParam AddWorkshopRequest addWorkshopRequest){
+        for( int i=0;i<10;i++){
+            workshopService.add(addWorkshopRequest);
+        }
+    }
 
     @PostMapping("addOrder")
     @ApiOperation(value = "add order")
@@ -50,7 +64,7 @@ public class TestHelperController {
     public void addProducts(@RequestParam("amount") Integer amount) {
 
         for (int count = 0; count < amount; count++) {
-            Product product = new Product("1234", "korepetycje", "Pomoc w programowaniu", BigDecimal.valueOf(150), null);
+            Product product = new Product("GoreWorkshop", "korepetycje", "Pomoc w programowaniu", BigDecimal.valueOf(150), null);
             productRepo.save(product);
         }
 

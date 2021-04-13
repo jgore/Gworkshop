@@ -30,7 +30,8 @@ Konto klienta
 Technologie : 
 
 [ Kubernetes, Docker, Microservice architecture, Java, Angular 8, Node.JS] \
-spring boot, spring-data, hibernate \
-postgresSQL, mongodb, liquibase \
+spring boot,  \
+mongodb \
+rabbitmq \
 gradle
 
