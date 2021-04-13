@@ -1,6 +1,7 @@
 package pl.goreit.blog.domain.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 import pl.goreit.api.generated.account.CreateAccountRequest;
 import pl.goreit.blog.domain.converter.CreateAccountRequestToAccountConverter;
@@ -17,7 +18,7 @@ public class AccountServiceImpl implements AccountService {
     private AccountRepo accountRepo;
 
     @Autowired
-    private CreateAccountRequestToAccountConverter converter;
+    private ConversionService conversionService;
 
     @Override
     public Account findByUserId(String userId) {
@@ -26,7 +27,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account add(CreateAccountRequest request) {
-        return accountRepo.save(Objects.requireNonNull(converter.convert(request)));
+        return accountRepo.save(Objects.requireNonNull(conversionService.convert(request, Account.class)));
     }
 
     @Override

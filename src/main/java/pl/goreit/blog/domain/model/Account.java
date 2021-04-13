@@ -1,39 +1,56 @@
 package pl.goreit.blog.domain.model;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Document
 public class Account {
 
-    @Id
-    private String id;
-
     private String userId;
 
-    private String firstName;
+    private List<Car> cars;
 
+    private String firstName;
     private String lastName;
+    private String pesel;
 
     private Address address;
 
     private BigDecimal balance;
-
     private BigDecimal coins;
 
     private LocalDateTime createdAt;
 
-    public Account(String userId, String firstName, String lastName, Address address, BigDecimal balance, BigDecimal coins) {
+    public Account(String userId, List<Car> cars, String pesel, String firstName, String lastName, Address address, BigDecimal balance, BigDecimal coins) {
         this.userId = userId;
+        this.cars = cars;
+        this.pesel = pesel;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.balance = balance;
         this.coins = coins;
         this.createdAt = LocalDateTime.now();
+    }
+
+    public boolean addCar(Car car) {
+        return this.cars.add(car);
+    }
+
+    public boolean removeCar(String vin) {
+        return this.cars.
+                removeIf(car -> car.getVin().equals(vin));
+    }
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public String getPesel() {
+        return pesel;
     }
 
     public void increaseBalance(BigDecimal value) {
@@ -50,10 +67,6 @@ public class Account {
 
     public BigDecimal getCoins() {
         return coins;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getUserId() {

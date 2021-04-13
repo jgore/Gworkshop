@@ -9,8 +9,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Document
-@Deprecated
-//remove order from goreit and refactor to order_service
 public class Order {
 
     @Id
