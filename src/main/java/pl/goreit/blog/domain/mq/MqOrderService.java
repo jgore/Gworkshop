@@ -30,7 +30,7 @@ public class MqOrderService {
         System.out.println("Sending -> " + jsonCreateOrderRequest);
         rabbitTemplate.convertAndSend(CREATE_ORDER_Q_IN, jsonCreateOrderRequest);
 
-        Message receive = rabbitTemplate.receive(CREATE_ORDER_Q_OUT, 10000);
+        Message receive = rabbitTemplate.receive(CREATE_ORDER_Q_OUT, 25000);
         byte[] body = receive.getBody();
         String stringJson = new String(body);
 

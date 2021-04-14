@@ -1,5 +1,6 @@
 package pl.goreit.blog.domain.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
@@ -9,8 +10,10 @@ import java.util.List;
 @Document
 public class Account {
 
+    @Id
     private String userId;
 
+    private Integer activeCarNo;
     private List<Car> cars;
 
     private String firstName;
@@ -27,6 +30,7 @@ public class Account {
     public Account(String userId, List<Car> cars, String pesel, String firstName, String lastName, Address address, BigDecimal balance, BigDecimal coins) {
         this.userId = userId;
         this.cars = cars;
+
         this.pesel = pesel;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -34,6 +38,10 @@ public class Account {
         this.balance = balance;
         this.coins = coins;
         this.createdAt = LocalDateTime.now();
+    }
+
+    public Integer getActiveCarNo() {
+        return activeCarNo;
     }
 
     public boolean addCar(Car car) {

@@ -16,6 +16,9 @@ import pl.goreit.blog.domain.model.Product;
 import pl.goreit.blog.domain.service.ProductService;
 import pl.goreit.blog.infrastructure.mongo.ProductRepo;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -34,6 +37,14 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public List<ProductViewDetails> findAllByTitleIn(List<String> titles) throws DomainException {
+        List<Product> allByTitle = productRepo.findByTitleIn(titles);
+        return  allByTitle.stream().
+                map(product -> sellConversionService.convert(product, ProductViewDetails.class))
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public ProductViewDetails add(CreateProductRequest createProductRequest) {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -43,7 +54,9 @@ public class ProductServiceImpl implements ProductService {
         Product product = new Product(
                 sellerId,
                 createProductRequest.getTitle(),
-                createProductRequest.getText(), createProductRequest.getPrice(), null);
+                createProductRequest.getText(),
+                createProductRequest.getPrice(),
+                null);
         productRepo.save(product);
         return sellConversionService.convert(product, ProductViewDetails.class);
     }

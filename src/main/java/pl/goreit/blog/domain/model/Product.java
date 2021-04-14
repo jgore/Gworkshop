@@ -17,7 +17,7 @@ public class Product {
     @Id
     private String id;
     private String sellerId;
-    @Indexed(unique = true)
+
     private String title;
     private String text;
     private BigDecimal price;

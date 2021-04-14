@@ -12,4 +12,6 @@ public interface ProductRepo extends MongoRepository<Product, String> {
 
     Optional<Product> findByTitle(String title);
 
+    List<Product> findByTitleIn(List<String> strings);
+
 }
