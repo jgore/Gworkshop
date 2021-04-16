@@ -30,7 +30,9 @@ public class Account {
     public Account(String userId, List<Car> cars, String pesel, String firstName, String lastName, Address address, BigDecimal balance, BigDecimal coins) {
         this.userId = userId;
         this.cars = cars;
-
+        if(! cars.isEmpty()) {
+            this.activeCarNo = 1;
+        }
         this.pesel = pesel;
         this.firstName = firstName;
         this.lastName = lastName;

@@ -9,7 +9,7 @@ import java.util.List;
 public interface OrderService {
 
     OrderResponse findById(String id) throws DomainException;
-    List<OrderResponse> findByUserId(String userId) throws DomainException;
+    List<OrderResponse> findByUserId() throws DomainException;
 
     OrderResponse create(CreateOrderRequest orderRequest) throws DomainException;
 }

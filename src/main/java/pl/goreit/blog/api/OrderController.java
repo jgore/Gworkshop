@@ -10,9 +10,7 @@ import pl.goreit.api.generated.CreateOrderRequest;
 import pl.goreit.api.generated.OrderResponse;
 import pl.goreit.blog.domain.DomainException;
 import pl.goreit.blog.domain.service.OrderService;
-import pl.goreit.blog.domain.service.PhotoAlbumService;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RestController
@@ -28,11 +26,11 @@ public class OrderController {
         return orderService.findById(id);
     }
 
-    @GetMapping("/byUser/{id}")
-    @ApiOperation(value = "get by user id", authorizations = @Authorization(value = "oauth2", scopes = @AuthorizationScope(description = "write", scope = "write")))
-    public List<OrderResponse> getOrders(HttpServletRequest httpRequest, @PathVariable("id") String id) throws DomainException {
+    @GetMapping()
+    @ApiOperation(value = "get  user orders", authorizations = @Authorization(value = "oauth2", scopes = @AuthorizationScope(description = "write", scope = "write")))
+    public List<OrderResponse> getOrders() throws DomainException {
 
-        return orderService.findByUserId(id);
+        return orderService.findByUserId();
     }
 
 

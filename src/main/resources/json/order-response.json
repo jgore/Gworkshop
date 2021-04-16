@@ -13,6 +13,9 @@
     "creationTime": {
       "type": "string"
     },
+    "totalCost": {
+      "type": "number"
+    },
     "orderlineViews": {
       "type": "array",
       "items": {

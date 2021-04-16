@@ -9,10 +9,10 @@ import pl.goreit.blog.domain.model.Car;
 public class CarViewToCarConverter  implements Converter<CarView, Car> {
     @Override
     public Car convert(CarView carView) {
-        return new Car(carView.getName(),
+        return new Car(carView.getNo(),
+                carView.getName(),
                 carView.getMark(),
                 carView.getModel(),
-                carView.getYear(),
-                carView.getVin());
+                carView.getYear(), carView.getVin());
     }
 }

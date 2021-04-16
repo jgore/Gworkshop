@@ -16,20 +16,20 @@ public class Product {
 
     @Id
     private String id;
-    private String sellerId;
+    private String workshopId;
 
+    @Indexed(unique=true)
     private String title;
     private String text;
     private BigDecimal price;
-    private List<String> boughtByList;
     private List<Comment> comments;
     private PhotoAlbum photoAlbum;
     private Status status;
 
     private LocalDateTime creationDate;
 
-    public Product(String sellerId, String title, String text, BigDecimal price, PhotoAlbum photoAlbum) {
-        this.sellerId = sellerId;
+    public Product(String workshopId, String title, String text, BigDecimal price, PhotoAlbum photoAlbum) {
+        this.workshopId = workshopId;
         this.title = title;
         this.text = text;
         this.price = price;
@@ -37,7 +37,6 @@ public class Product {
         this.status = Status.ACTIVE;
         this.creationDate = LocalDateTime.now();
         this.comments = Lists.newArrayList();
-        this.boughtByList = Lists.newArrayList();
     }
 
     public boolean addComment(Comment comment) throws DomainException {
@@ -47,27 +46,16 @@ public class Product {
         return comments.add(comment);
     }
 
-
-
-    public void updateBoughtBy(String userId) {
-        this.boughtByList.add(userId);
-    }
-
-
     public PhotoAlbum getPhotoAlbum() {
         return photoAlbum;
-    }
-
-    public List<String> getBoughtByList() {
-        return boughtByList;
     }
 
     public String getId() {
         return id;
     }
 
-    public String getSellerId() {
-        return sellerId;
+    public String getWorkshopId() {
+        return workshopId;
     }
 
     public BigDecimal getPrice() {

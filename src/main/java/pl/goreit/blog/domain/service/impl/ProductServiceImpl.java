@@ -5,8 +5,6 @@ import org.springframework.core.convert.ConversionService;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-import pl.goreit.api.generated.OrderResponse;
-import pl.goreit.api.generated.OrderlineView;
 import pl.goreit.api.generated.ProductViewDetails;
 import pl.goreit.api.generated.product_api.CreateProductRequest;
 import pl.goreit.blog.domain.DomainException;
@@ -75,16 +73,4 @@ public class ProductServiceImpl implements ProductService {
         return sellConversionService.convert(saved, ProductViewDetails.class);
     }
 
-    @Override
-    public void updateAfterOrdered(OrderResponse orderResponse) {
-        for (OrderlineView orderlineView : orderResponse.getOrderlineViews()) {
-            String productTitle = orderlineView.getProductTitle();
-            Product product = productRepo.findByTitle(productTitle).get();
-
-            product.updateBoughtBy(orderResponse.getUserId());
-
-            productRepo.save(product);
-        }
-
-    }
 }

@@ -19,12 +19,6 @@
         "$ref": "./comment-view.json"
       }
     },
-    "boughtByList": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
     "status": {
       "type": "string"
     }

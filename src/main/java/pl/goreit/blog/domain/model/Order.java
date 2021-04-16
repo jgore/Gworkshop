@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -20,6 +21,8 @@ public class Order {
 
     private List<OrderLine> orderLines;
 
+    private BigDecimal totalCost;
+
     @JsonSerialize(using = ToStringSerializer.class)
     private LocalDateTime creationTime;
 
@@ -32,7 +35,11 @@ public class Order {
         this.userId = userId;
         this.orderLines = orderLines;
         this.creationTime = creationTime;
+        orderLines.forEach(orderLine -> {
+            this.totalCost = orderLine.getPrice().multiply(BigDecimal.valueOf(orderLine.getAmount()));
+        });
     }
+
 
     public String getId() {
         return id;
@@ -52,5 +59,9 @@ public class Order {
 
     public LocalDateTime getCreationTime() {
         return creationTime;
+    }
+
+    public BigDecimal getTotalCost() {
+        return totalCost;
     }
 }

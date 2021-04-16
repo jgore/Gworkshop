@@ -7,6 +7,12 @@
     "name": {
       "type": "string"
     },
+    "products": {
+      "type": "array",
+      "items": {
+        "$ref": "../product-view.json"
+      }
+    },
     "mechanicList": {
       "type": "array",
       "items": {

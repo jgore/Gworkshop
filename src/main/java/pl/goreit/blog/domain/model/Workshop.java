@@ -1,5 +1,6 @@
 package pl.goreit.blog.domain.model;
 
+import com.google.common.collect.Lists;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -13,6 +14,7 @@ public class Workshop {
     private String id;
     private String name;
 
+    private List<Product> products;
     private List<Mechanic> mechanicList;
 
     private PhotoAlbum photoAlbum;
@@ -26,9 +28,10 @@ public class Workshop {
         ACTIVE, INACTIVE, SUSPENDED
     }
 
-    public Workshop(String id, String name, List<Mechanic> mechanicList, PhotoAlbum photoAlbum, Address address, String nip) {
+    public Workshop(String id, String name, List<Product> products, List<Mechanic> mechanicList, PhotoAlbum photoAlbum, Address address, String nip) {
         this.id = id;
         this.name = name;
+        this.products = products;
         this.mechanicList = mechanicList;
         this.photoAlbum = photoAlbum;
         this.address = address;
@@ -59,7 +62,15 @@ public class Workshop {
     }
 
     public List<Mechanic> getMechanicList() {
-        return mechanicList;
+        return Lists.newArrayList(mechanicList);
+    }
+
+    public List<Product> getProducts() {
+        return Lists.newArrayList(products);
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
     public PhotoAlbum getPhotoAlbum() {

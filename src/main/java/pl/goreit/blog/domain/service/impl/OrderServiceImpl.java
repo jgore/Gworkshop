@@ -9,8 +9,6 @@ import org.springframework.stereotype.Component;
 import pl.goreit.api.generated.*;
 import pl.goreit.blog.domain.DomainException;
 import pl.goreit.blog.domain.ExceptionCode;
-import pl.goreit.blog.domain.model.Account;
-import pl.goreit.blog.domain.model.Car;
 import pl.goreit.blog.domain.model.Order;
 import pl.goreit.blog.domain.mq.MqOrderService;
 import pl.goreit.blog.domain.service.AccountService;
@@ -49,7 +47,11 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<OrderResponse> findByUserId(String userId) {
+    public List<OrderResponse> findByUserId() {
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String userId = authentication.getName();
+
         List<Order> ordersByUser = orderRepo.findByUserId(userId);
         return ordersByUser.stream()
                 .map(order -> sellConversionService.convert(order, OrderResponse.class))
@@ -76,7 +78,6 @@ public class OrderServiceImpl implements OrderService {
         try {
             orderResponse = mqOrderService.sendOrder(createOrderRequest);
             pricingService.coinsSettlement(orderResponse);
-            productService.updateAfterOrdered(orderResponse);
             accountService.updateWithServices(orderResponse.getOrderlineViews());
 
         } catch (JsonProcessingException e) {

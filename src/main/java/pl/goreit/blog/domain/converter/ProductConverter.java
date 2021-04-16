@@ -23,14 +23,13 @@ public class ProductConverter implements Converter<Product, ProductViewDetails> 
 
     @Override
     public ProductViewDetails convert(Product product) {
-        return new ProductViewDetails(product.getSellerId(),
+        return new ProductViewDetails(product.getWorkshopId(),
                 product.getTitle(),
                 product.getText(),
                 product.getPrice().toString(),
                 product.getComments().stream()
                         .map(comment -> conversionService.convert(comment, CommentView.class))
                         .collect(Collectors.toList()),
-                product.getBoughtByList(),
                 product.getStatus().name());
     }
 }

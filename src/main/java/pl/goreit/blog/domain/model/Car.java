@@ -14,7 +14,8 @@ public class Car {
     private String vin;
     private List<Product> services;
 
-    public Car(String name, String mark, String model, Integer year, String vin) {
+    public Car(Integer No, String name, String mark, String model, Integer year, String vin) {
+        this.No = No;
         this.name = name;
         this.mark = mark;
         this.model = model;

@@ -1,5 +1,6 @@
 package pl.goreit.blog.domain.service.impl;
 
+import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
@@ -35,13 +36,13 @@ public class WorkshopServiceImpl implements WorkshopService {
         Workshop workshop = new Workshop(
                 UUID.randomUUID().toString(),
                 addWorkshopRequest.getName(),
+                Lists.newArrayList(),
                 addWorkshopRequest.getMechanicList()
                         .stream()
                         .map(mechanic -> conversionService.convert(mechanic, Mechanic.class))
                         .collect(Collectors.toList()),
                 null,
-                conversionService.convert(addWorkshopRequest.getAddress(), Address.class),
-                addWorkshopRequest.getNip());
+                conversionService.convert(addWorkshopRequest.getAddress(), Address.class), addWorkshopRequest.getNip());
         Workshop persisted = workshopRepo.save(workshop);
         return conversionService.convert(persisted, WorkshopView.class);
     }
