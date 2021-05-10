@@ -72,22 +72,6 @@ services:
     networks:
       - goreit
 
-  solr:
-    image: solr:8
-    ports:
-      - "8983:8983"
-    deploy:
-      resources:
-        limits:
-          cpus: '1'
-          memory: 2000M
-    volumes:
-      - goreit-solr-data:/var/solr
-    command:
-      - solr-precreate
-      - goreit
-    networks:
-      - goreit
 
   postgres:
     image: postgres

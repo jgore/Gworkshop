@@ -12,8 +12,6 @@ spring:
       port: 27017
       password: root
       username: root
-    solr:
-      host: http://127.0.0.1:8983/solr
   servlet:
     multipart:
       enabled: true
@@ -21,6 +19,22 @@ spring:
       max-request-size: 20MB
     application:
       name: Goreit
+
+keycloak:
+  realm: fixa
+  resource: fixa-app
+  auth-server-url: http://localhost:8080/auth
+  public-client: true
+  enabled: true
+
+#  securityConstraints[0]:
+#    authRoles[0]: user
+#    authRoles[1]: workshop
+#    securityCollections[0]:
+#      name: user resource
+#      patterns: /order*
+
+  principal-attribute: preferred_username
 
 
 #  cloud:
@@ -38,7 +52,7 @@ server:
 #      enabled: true
 
 pricing:
-  commission: 0.02
+  commission: 0.00
   default:
     balance: 100
     coins: 200
