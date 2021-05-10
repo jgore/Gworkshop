@@ -7,20 +7,14 @@
     "pesel;": {
       "type": "string"
     },
+    "person": {
+      "$ref": "person-view.json"
+    },
     "cars": {
       "type": "array",
       "items": {
         "$ref": "car-view.json"
       }
-    },
-    "firstName": {
-      "type": "string"
-    },
-    "lastName": {
-      "type": "string"
-    },
-    "address": {
-      "$ref": "address-view.json"
     }
   }
 }

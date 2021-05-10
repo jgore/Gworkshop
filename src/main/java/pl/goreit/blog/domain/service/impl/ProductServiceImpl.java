@@ -30,7 +30,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductViewDetails findByTitle(String title) throws DomainException {
-        Product product = productRepo.findByTitle(title).orElseThrow(() -> new DomainException(ExceptionCode.GOREIT_01));
+        Product product = productRepo.findByTitle(title).orElseThrow(() -> new DomainException(ExceptionCode.PRODUCT_NOT_EXIST));
         return sellConversionService.convert(product, ProductViewDetails.class);
     }
 
@@ -61,7 +61,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductViewDetails addComment(String userId, String productTitle, String text) throws DomainException {
-        Product product = productRepo.findByTitle(productTitle).orElseThrow(() -> new DomainException(ExceptionCode.GOREIT_01));
+        Product product = productRepo.findByTitle(productTitle).orElseThrow(() -> new DomainException(ExceptionCode.PRODUCT_NOT_EXIST));
 
         Integer sequenceNo = 0;
         if (product.getComments().size() > 0) {

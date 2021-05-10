@@ -1,9 +1,6 @@
 {
   "type": "object",
   "properties": {
-    "nip": {
-      "type": "string"
-    },
     "name": {
       "type": "string"
     },
@@ -18,9 +15,6 @@
       "items": {
         "$ref": "mechanic-view.json"
       }
-    },
-    "address": {
-      "$ref": "address-view.json"
     }
   }
 }

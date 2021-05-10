@@ -6,7 +6,7 @@ import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Service;
 import pl.goreit.api.generated.workshop.AddWorkshopRequest;
 import pl.goreit.api.generated.workshop.WorkshopView;
-import pl.goreit.blog.domain.model.Address;
+import pl.goreit.blog.domain.model.Company;
 import pl.goreit.blog.domain.model.Mechanic;
 import pl.goreit.blog.domain.model.Workshop;
 import pl.goreit.blog.domain.service.WorkshopService;
@@ -26,7 +26,7 @@ public class WorkshopServiceImpl implements WorkshopService {
     private ConversionService conversionService;
 
     @Override
-    public WorkshopView findByByName(String name) {
+    public WorkshopView findByName(String name) {
         Workshop workshop = workshopRepo.findByName(name);
         return conversionService.convert(workshop, WorkshopView.class);
     }
@@ -36,13 +36,13 @@ public class WorkshopServiceImpl implements WorkshopService {
         Workshop workshop = new Workshop(
                 UUID.randomUUID().toString(),
                 addWorkshopRequest.getName(),
+                addWorkshopRequest.getOwner(),
+                conversionService.convert( addWorkshopRequest.getCompany(), Company.class ),
                 Lists.newArrayList(),
                 addWorkshopRequest.getMechanicList()
                         .stream()
                         .map(mechanic -> conversionService.convert(mechanic, Mechanic.class))
-                        .collect(Collectors.toList()),
-                null,
-                conversionService.convert(addWorkshopRequest.getAddress(), Address.class), addWorkshopRequest.getNip());
+                        .collect(Collectors.toList()), null);
         Workshop persisted = workshopRepo.save(workshop);
         return conversionService.convert(persisted, WorkshopView.class);
     }

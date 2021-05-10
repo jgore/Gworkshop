@@ -1,26 +1,20 @@
-
-
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "properties": {
-    "No": {
-      "type": "integer"
-    },
-    "name": {
+    "pesel": {
       "type": "string"
     },
-    "mark": {
+    "firstName": {
       "type": "string"
     },
-    "model": {
+    "lastName": {
       "type": "string"
     },
-    "year": {
-      "type": "integer"
-    },
-    "vin": {
-      "type": "string"
+    "address": {
+      "$ref": "address-view.json"
     }
   }
-
 }
+
+
+

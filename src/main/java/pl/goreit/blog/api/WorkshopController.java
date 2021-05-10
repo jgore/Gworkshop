@@ -25,7 +25,7 @@ public class WorkshopController {
     @GetMapping("/{title}")
     @ApiOperation(value = "pobiera jeden warsztat", notes = "pobiera 1 warsztat")
     public WorkshopView get(@PathVariable String name) {
-        return workshopService.findByByName(name);
+        return workshopService.findByName(name);
     }
 
     @PostMapping()

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface WorkshopService {
 
-    WorkshopView findByByName(String name);
+    WorkshopView findByName(String name);
 
     WorkshopView add(AddWorkshopRequest addWorkshopRequest);
 

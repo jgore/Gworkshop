@@ -4,23 +4,14 @@
     "userId": {
       "type": "string"
     },
-    "pesel": {
-      "type": "string"
-    },
     "cars": {
       "type": "array",
       "items": {
         "$ref": "car-view.json"
       }
     },
-    "firstName": {
-      "type": "string"
-    },
-    "lastName": {
-      "type": "string"
-    },
-    "address": {
-      "$ref": "address-view.json"
+    "person": {
+      "$ref": "person-view.json"
     }
   }
 }

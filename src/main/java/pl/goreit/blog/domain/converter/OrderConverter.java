@@ -15,7 +15,7 @@ public class OrderConverter implements Converter<Order, OrderResponse> {
     public OrderResponse convert(Order order) {
         return new OrderResponse(order.getId(),
                 order.getUserId(),
-                order.getSellerId(),
+                order.getWorkshopName(),
                 order.getCreationTime().toString(),
                 order.getTotalCost(),
                 order.getOrderLines().stream()

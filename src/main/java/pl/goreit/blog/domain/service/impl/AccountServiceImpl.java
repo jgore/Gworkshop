@@ -40,7 +40,7 @@ public class AccountServiceImpl implements AccountService {
         Account account = accountRepo.findByUserId(userId);
         Integer No = account.getActiveCarNo();
         Car activeCar = account.getCars().stream()
-                .filter(car -> car.getNo().equals(No)).findFirst().orElseThrow(() -> new DomainException(ExceptionCode.GOREIT_07));
+                .filter(car -> car.getNo().equals(No)).findFirst().orElseThrow(() -> new DomainException(ExceptionCode.CAR_NOT_EXIST));
 
         List<String> serviceNames = orderLineViews.stream()
                 .map(OrderlineView::getProductTitle)

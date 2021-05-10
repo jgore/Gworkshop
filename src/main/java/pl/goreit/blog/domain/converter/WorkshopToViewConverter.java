@@ -6,8 +6,10 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import pl.goreit.api.generated.ProductView;
 import pl.goreit.api.generated.workshop.AddressView;
+import pl.goreit.api.generated.workshop.CompanyView;
 import pl.goreit.api.generated.workshop.MechanicView;
 import pl.goreit.api.generated.workshop.WorkshopView;
+import pl.goreit.blog.domain.model.Company;
 import pl.goreit.blog.domain.model.Product;
 import pl.goreit.blog.domain.model.Workshop;
 
@@ -25,14 +27,15 @@ public class WorkshopToViewConverter implements Converter<Workshop, WorkshopView
 
     @Override
     public WorkshopView convert(Workshop workshop) {
-        return new WorkshopView(workshop.getNip(),
-                workshop.getName(),
+        return new WorkshopView(workshop.getName(),
+                workshop.getOwner(),
+                conversionService.convert(workshop.getCompany(), CompanyView.class),
                 workshop.getProducts().stream()
                         .map(product -> conversionService.convert(product, ProductView.class))
                         .collect(Collectors.toList()),
                 workshop.getMechanicList().stream()
                         .map(mechanic -> conversionService.convert(mechanic, MechanicView.class))
-                        .collect(Collectors.toList()),
-                conversionService.convert(workshop.getAddress(), AddressView.class));
+                        .collect(Collectors.toList())
+                );
     }
 }

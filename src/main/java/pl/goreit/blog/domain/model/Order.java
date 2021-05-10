@@ -17,7 +17,7 @@ public class Order {
 
     private String userId;
 
-    private String sellerId;
+    private String workshopName;
 
     private List<OrderLine> orderLines;
 
@@ -36,7 +36,7 @@ public class Order {
         this.orderLines = orderLines;
         this.creationTime = creationTime;
         orderLines.forEach(orderLine -> {
-            this.totalCost = orderLine.getPrice().multiply(BigDecimal.valueOf(orderLine.getAmount()));
+            this.totalCost = this.totalCost.add( orderLine.getPrice().multiply(BigDecimal.valueOf(orderLine.getAmount())) );
         });
     }
 
@@ -49,8 +49,8 @@ public class Order {
         return userId;
     }
 
-    public String getSellerId() {
-        return sellerId;
+    public String getWorkshopName() {
+        return workshopName;
     }
 
     public List<OrderLine> getOrderLines() {

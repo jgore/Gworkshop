@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "nip": {
+      "type": "string"
+    },
+    "address": {
+      "$ref": "address-view.json"
+    }
+  }
+
+}

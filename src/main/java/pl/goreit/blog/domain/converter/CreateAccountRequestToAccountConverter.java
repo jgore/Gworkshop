@@ -7,8 +7,8 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import pl.goreit.api.generated.account.CreateAccountRequest;
 import pl.goreit.blog.domain.model.Account;
-import pl.goreit.blog.domain.model.Address;
 import pl.goreit.blog.domain.model.Car;
+import pl.goreit.blog.domain.model.Person;
 
 import java.math.BigDecimal;
 import java.util.stream.Collectors;
@@ -34,12 +34,6 @@ public class CreateAccountRequestToAccountConverter implements Converter<CreateA
                 request.getCars().stream()
                         .map(car -> conversionService.convert(car, Car.class))
                         .collect(Collectors.toList()),
-
-                request.getPesel(),
-                request.getFirstName(),
-                request.getLastName(),
-                conversionService.convert(request.getAddress(), Address.class),
-                new BigDecimal(defaultBalance),
-                new BigDecimal(defaultCoins));
+                conversionService.convert(request.getPerson(), Person.class));
     }
 }

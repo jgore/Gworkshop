@@ -3,7 +3,6 @@ package pl.goreit.blog.domain.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -12,15 +11,10 @@ public class Account {
 
     @Id
     private String userId;
+    private Person person;
 
     private Integer activeCarNo;
     private List<Car> cars;
-
-    private String firstName;
-    private String lastName;
-    private String pesel;
-
-    private Address address;
 
     private BigDecimal balance;
     private BigDecimal coins;
@@ -30,15 +24,10 @@ public class Account {
     public Account(String userId, List<Car> cars, String pesel, String firstName, String lastName, Address address, BigDecimal balance, BigDecimal coins) {
         this.userId = userId;
         this.cars = cars;
-        if(! cars.isEmpty()) {
+        if (!cars.isEmpty()) {
             this.activeCarNo = 1;
         }
-        this.pesel = pesel;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.balance = balance;
-        this.coins = coins;
+        this.person = person;
         this.createdAt = LocalDateTime.now();
     }
 
@@ -59,44 +48,12 @@ public class Account {
         return cars;
     }
 
-    public String getPesel() {
-        return pesel;
-    }
-
-    public void increaseBalance(BigDecimal value) {
-        this.balance = this.balance.add(value);
-    }
-
-    public void decreaseBalance(BigDecimal value) {
-        this.balance = this.balance.subtract(value);
-    }
-
-    public void increaseCoins(BigDecimal value) {
-        this.coins = this.coins.add(value);
-    }
-
-    public BigDecimal getCoins() {
-        return coins;
-    }
-
     public String getUserId() {
         return userId;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public BigDecimal getBalance() {
-        return balance;
+    public Person getPerson() {
+        return person;
     }
 
     public LocalDateTime getCreatedAt() {

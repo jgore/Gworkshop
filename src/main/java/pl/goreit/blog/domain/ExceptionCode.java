@@ -2,12 +2,12 @@ package pl.goreit.blog.domain;
 
 public enum ExceptionCode {
 
-    GOREIT_01("GoreIT.01", "Product does not exist"),
-    GOREIT_03("GoreIT.03", "Comment can be added only to available products"),
-    GOREIT_04("GoreIT.04", "Order not found {} "),
-    GOREIT_05("GoreIT.05", "Some Import already in progress"),
-    GOREIT_06("GoreIT.06", "Order must contains orderlines"),
-    GOREIT_07("GoreIT.07", "Car No {}  not exist  in cars");
+    PRODUCT_NOT_EXIST("GoreIT.01", "Product does not exist"),
+    NON_AVAILABLE_PRODUCT("GoreIT.03", "Non available  product"),
+    ORDER_NOT_FOUND("GoreIT.04", "Order not found {} "),
+    IMPORT_IN_PROGRESS("GoreIT.05", "Some Import already in progress"),
+    ORDER_NOT_HAVE_ORDERLINES("GoreIT.06", "Order must contains orderlines"),
+    CAR_NOT_EXIST("GoreIT.07", "Car No {}  not exist  in cars");
 
 
 

@@ -41,7 +41,7 @@ public class Product {
 
     public boolean addComment(Comment comment) throws DomainException {
         if (Status.ACTIVE != getStatus()) {
-            throw new DomainException(ExceptionCode.GOREIT_03);
+            throw new DomainException(ExceptionCode.NON_AVAILABLE_PRODUCT);
         }
         return comments.add(comment);
     }

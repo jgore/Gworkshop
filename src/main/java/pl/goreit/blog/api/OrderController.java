@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import pl.goreit.api.generated.CreateOrderRequest;
 import pl.goreit.api.generated.OrderResponse;
+import pl.goreit.api.generated.ReceiveOrderRequest;
 import pl.goreit.blog.domain.DomainException;
 import pl.goreit.blog.domain.service.OrderService;
 
@@ -34,10 +35,15 @@ public class OrderController {
     }
 
 
-    @PostMapping(value = "/add", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE, MediaType.APPLICATION_JSON_VALUE})
-    @ApiOperation(value = "add new order")
-    public OrderResponse addOrder(@RequestBody CreateOrderRequest orderRequest) throws DomainException {
-        return orderService.create(orderRequest);
+    @PostMapping(value = "/schedule", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    @ApiOperation(value = "schedule new order")
+    public OrderResponse schedule(@RequestBody CreateOrderRequest orderRequest) throws DomainException {
+        return orderService.schedule(orderRequest);
     }
 
+    @PostMapping(value = "/receive", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    @ApiOperation(value = "schedule new order")
+    public OrderResponse receive(@RequestBody ReceiveOrderRequest orderRequest) throws DomainException {
+        return orderService.receive(orderRequest);
+    }
 }

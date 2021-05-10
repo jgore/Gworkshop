@@ -18,8 +18,9 @@ public class Workshop {
     private List<Mechanic> mechanicList;
 
     private PhotoAlbum photoAlbum;
-    private Address address;
-    private String nip;
+
+    private Company company;
+    private Integer invoiceCounter;
 
     private Status status;
     private LocalDateTime creationDate;
@@ -34,11 +35,10 @@ public class Workshop {
         this.products = products;
         this.mechanicList = mechanicList;
         this.photoAlbum = photoAlbum;
-        this.address = address;
-        this.nip = nip;
 
-        status = Status.ACTIVE;
+        this.status = Status.ACTIVE;
         this.creationDate = LocalDateTime.now();
+        this.invoiceCounter = 1;
     }
 
     public void activate() {
@@ -55,6 +55,10 @@ public class Workshop {
 
     public String getNip() {
         return nip;
+    }
+
+    public Company getCompany() {
+        return company;
     }
 
     public String getName() {
@@ -77,10 +81,6 @@ public class Workshop {
         return photoAlbum;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
     public Status getStatus() {
         return status;
     }
@@ -89,4 +89,11 @@ public class Workshop {
         return creationDate;
     }
 
+    public Integer getInvoiceCounter() {
+        return invoiceCounter;
+    }
+
+    public void increaseInvoiceCounter() {
+        invoiceCounter++;
+    }
 }
