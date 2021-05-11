@@ -16,6 +16,9 @@
     "totalCost": {
       "type": "number"
     },
+    "status": {
+      "existingJavaType": "pl.goreit.blog.domain.model.Order.Status"
+    },
     "orderlineViews": {
       "type": "array",
       "items": {
@@ -26,7 +29,6 @@
   "definitions": {
     "orderlineView": {
       "type": "object",
-
       "properties": {
         "sellerId": {
           "type": "string"
@@ -41,7 +43,11 @@
           "type": "number"
         }
       },
-      "required": ["productTitle", "amount", "price"]
+      "required": [
+        "productTitle",
+        "amount",
+        "price"
+      ]
     }
   }
 }

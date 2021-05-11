@@ -26,15 +26,14 @@ keycloak:
   auth-server-url: http://localhost:8080/auth
   public-client: true
   enabled: true
-
+  use-resource-role-mappings: true
+  principal-attribute: preferred_username
 #  securityConstraints[0]:
 #    authRoles[0]: user
 #    authRoles[1]: workshop
 #    securityCollections[0]:
 #      name: user resource
 #      patterns: /order*
-
-  principal-attribute: preferred_username
 
 
 #  cloud:

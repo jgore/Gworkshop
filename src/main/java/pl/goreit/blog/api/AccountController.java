@@ -10,12 +10,22 @@ import pl.goreit.blog.domain.DomainException;
 import pl.goreit.blog.domain.model.Account;
 import pl.goreit.blog.domain.service.AccountService;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import java.security.Principal;
+
 @RestController
 @RequestMapping("/account")
 public class AccountController {
 
     @Autowired
     private AccountService accountService;
+
+    @GetMapping(path = "/logout")
+    public String logout(HttpServletRequest request) throws ServletException {
+        request.logout();
+        return "/";
+    }
 
     @GetMapping
     @ApiOperation(value = "pobiera  konto")

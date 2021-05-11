@@ -18,6 +18,7 @@ public class OrderConverter implements Converter<Order, OrderResponse> {
                 order.getWorkshopName(),
                 order.getCreationTime().toString(),
                 order.getTotalCost(),
+                order.getStatus(),
                 order.getOrderLines().stream()
                         .map(orderProduct -> new OrderlineView(orderProduct.getSellerId(), orderProduct.getProductTitle(), orderProduct.getAmount(), orderProduct.getPrice()))
                         .collect(Collectors.toList()));

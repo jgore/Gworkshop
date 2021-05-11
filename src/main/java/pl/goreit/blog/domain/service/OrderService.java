@@ -109,7 +109,7 @@ public class OrderService {
 
         Integer invoiceCounter = workshop.getInvoiceCounter();
         InvoiceGenerator invoiceGenerator = new InvoiceGenerator(order, workshop, person);
-        invoiceGenerator.generate(invoiceCounter + "_" + LocalDate.now().getYear() + "__" + order.getWorkshopName() + ".pdf");
+        invoiceGenerator.generate(invoiceCounter + "_" + LocalDate.now().getYear() + "__" + order.getWorkshopName() +"_"+order.getId() +".pdf");
 
         order.receiveOrder();
         orderRepo.save(order);
