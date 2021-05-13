@@ -12,6 +12,7 @@ import pl.goreit.api.generated.ReceiveOrderRequest;
 import pl.goreit.blog.domain.DomainException;
 import pl.goreit.blog.domain.service.OrderService;
 
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -28,20 +29,20 @@ public class OrderController {
     }
 
     @GetMapping()
-    @ApiOperation(value = "get  user orders", authorizations = @Authorization(value = "oauth2", scopes = @AuthorizationScope(description = "write", scope = "write")))
-    public List<OrderResponse> getOrders() throws DomainException {
+    @ApiOperation(value = "get  user orders")
+    public List<OrderResponse> getOrders( ) throws DomainException {
 
         return orderService.findByUserId();
     }
 
 
-    @PostMapping(value = "/schedule", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    @PostMapping(value = "/schedule")
     @ApiOperation(value = "schedule new order")
     public OrderResponse schedule(@RequestBody CreateOrderRequest orderRequest) throws DomainException {
         return orderService.schedule(orderRequest);
     }
 
-    @PostMapping(value = "/receive", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    @PostMapping(value = "/receive")
     @ApiOperation(value = "schedule new order")
     public OrderResponse receive(@RequestBody ReceiveOrderRequest orderRequest) throws DomainException {
         return orderService.receive(orderRequest);

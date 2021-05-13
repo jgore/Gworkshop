@@ -3,6 +3,7 @@ package pl.goreit.blog.configuration;
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.keycloak.adapters.springsecurity.KeycloakSecurityComponents;
 import org.keycloak.adapters.springsecurity.authentication.KeycloakAuthenticationProvider;
+import org.keycloak.adapters.springsecurity.authentication.KeycloakLogoutHandler;
 import org.keycloak.adapters.springsecurity.config.KeycloakWebSecurityConfigurerAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +16,8 @@ import org.springframework.security.core.authority.mapping.SimpleAuthorityMapper
 import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy;
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @EnableWebSecurity
@@ -47,10 +50,15 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
-        http.authorizeRequests()
-                .antMatchers("/orders/*").hasRole("user")
-                .antMatchers("/account/*").hasRole("user")
+        http.csrf();
+        http.logout().invalidateHttpSession(true).logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/").addLogoutHandler(keycloakLogoutHandler())
+                .and().authorizeRequests()
+                .antMatchers("/orders", "/orders/**", "/orders/receive", "/orders/schedule", "/accounts", "/accounts/**, ")
+                .hasRole("user")
                 .anyRequest()
                 .permitAll();
+
+
     }
+
 }

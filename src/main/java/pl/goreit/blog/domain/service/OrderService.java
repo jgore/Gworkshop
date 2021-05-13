@@ -1,6 +1,7 @@
 package pl.goreit.blog.domain.service;
 
 import org.bson.types.ObjectId;
+import org.keycloak.adapters.springsecurity.token.KeycloakAuthenticationToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.security.core.Authentication;
@@ -54,10 +55,10 @@ public class OrderService {
 
     public List<OrderResponse> findByUserId() {
 
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String userId = authentication.getName();
+        KeycloakAuthenticationToken authentication = (KeycloakAuthenticationToken)
+                SecurityContextHolder.getContext().getAuthentication();
 
-        List<Order> ordersByUser = orderRepo.findByUserId(userId);
+        List<Order> ordersByUser = orderRepo.findByUserId(authentication.getName());
         return ordersByUser.stream()
                 .map(order -> sellConversionService.convert(order, OrderResponse.class))
                 .collect(Collectors.toList());
