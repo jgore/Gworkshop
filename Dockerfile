@@ -7,3 +7,4 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY ${JAR_FILE} /
 COPY ./entrypoint.sh entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+

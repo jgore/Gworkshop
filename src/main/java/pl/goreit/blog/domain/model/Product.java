@@ -28,7 +28,8 @@ public class Product {
 
     private LocalDateTime creationDate;
 
-    public Product(String workshopId, String title, String text, BigDecimal price, PhotoAlbum photoAlbum) {
+    public Product(String id, String workshopId, String title, String text, BigDecimal price, PhotoAlbum photoAlbum) {
+        this.id = id;
         this.workshopId = workshopId;
         this.title = title;
         this.text = text;

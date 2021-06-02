@@ -2,6 +2,8 @@ package pl.goreit.blog.domain.service;
 
 import org.bson.types.ObjectId;
 import org.keycloak.adapters.springsecurity.token.KeycloakAuthenticationToken;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.security.core.Authentication;
@@ -26,6 +28,8 @@ import java.util.stream.Collectors;
 
 @Component
 public class OrderService {
+
+    Logger logger = LoggerFactory.getLogger(OrderService.class);
 
     @Autowired
     private ConversionService sellConversionService;
@@ -110,9 +114,14 @@ public class OrderService {
 
         Integer invoiceCounter = workshop.getInvoiceCounter();
         InvoiceGenerator invoiceGenerator = new InvoiceGenerator(order, workshop, person);
-        invoiceGenerator.generate(invoiceCounter + "_" + LocalDate.now().getYear() + "__" + order.getWorkshopName() +"_"+order.getId() +".pdf");
+        String invoiceFilename = invoiceCounter + "_" + LocalDate.now().getYear() + "__" + order.getWorkshopName() + "_" + order.getId() + ".pdf";
+        invoiceGenerator.generate(invoiceFilename);
+
+        logger.info("invoice saved" + invoiceFilename);
 
         order.receiveOrder();
+        order.setInvoiceFileName(invoiceFilename);
+
         orderRepo.save(order);
         workshop.increaseInvoiceCounter();
         workshopRepo.save(workshop);

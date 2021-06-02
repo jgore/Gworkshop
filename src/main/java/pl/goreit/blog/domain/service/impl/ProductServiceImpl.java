@@ -1,5 +1,6 @@
 package pl.goreit.blog.domain.service.impl;
 
+import org.keycloak.adapters.springsecurity.token.KeycloakAuthenticationToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.security.core.Authentication;
@@ -15,6 +16,7 @@ import pl.goreit.blog.domain.service.ProductService;
 import pl.goreit.blog.infrastructure.mongo.ProductRepo;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -45,16 +47,17 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductViewDetails add(CreateProductRequest createProductRequest) {
 
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        KeycloakAuthenticationToken authentication = (KeycloakAuthenticationToken)
+                SecurityContextHolder.getContext().getAuthentication();
+
         String sellerId = authentication.getName();
 
         //@FIXME allow add photo album to product
-        Product product = new Product(
+        Product product = new Product(UUID.randomUUID().toString(),
                 sellerId,
                 createProductRequest.getTitle(),
                 createProductRequest.getText(),
-                createProductRequest.getPrice(),
-                null);
+                createProductRequest.getPrice(), null);
         productRepo.save(product);
         return sellConversionService.convert(product, ProductViewDetails.class);
     }

@@ -23,7 +23,7 @@ public class ProductController {
         return productService.findByTitle(title);
     }
 
-    @PostMapping
+    @PostMapping("/add")
     @ApiOperation(value = "dodaje 1 produkt", notes = "dodaje produkt")
     public ProductViewDetails addProduct(@RequestBody CreateProductRequest request) {
         return productService.add(request);

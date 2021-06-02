@@ -18,6 +18,7 @@ import pl.goreit.blog.infrastructure.mongo.ProductRepo;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/test")
@@ -33,7 +34,7 @@ public class TestHelperController {
     @Autowired
     private WorkshopService workshopService;
 
-    @PostMapping("addwWorkshops")
+    @PostMapping("addWorkshops")
     @ApiOperation(value = "add workshops 10")
     public void addWorkshops(@RequestParam AddWorkshopRequest addWorkshopRequest){
         for( int i=0;i<10;i++){
@@ -64,7 +65,7 @@ public class TestHelperController {
     public void addProducts(@RequestParam("amount") Integer amount) {
 
         for (int count = 0; count < amount; count++) {
-            Product product = new Product("GoreWorkshop", "korepetycje", "Pomoc w programowaniu", BigDecimal.valueOf(150), null);
+            Product product = new Product(UUID.randomUUID().toString(), "GoreWorkshop", "korepetycje", "Pomoc w programowaniu", BigDecimal.valueOf(150), null);
             productRepo.save(product);
         }
 

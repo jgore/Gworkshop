@@ -3,12 +3,12 @@ package pl.goreit.blog.configuration;
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.keycloak.adapters.springsecurity.KeycloakSecurityComponents;
 import org.keycloak.adapters.springsecurity.authentication.KeycloakAuthenticationProvider;
-import org.keycloak.adapters.springsecurity.authentication.KeycloakLogoutHandler;
 import org.keycloak.adapters.springsecurity.config.KeycloakWebSecurityConfigurerAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -17,7 +17,6 @@ import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy;
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @EnableWebSecurity
@@ -50,15 +49,17 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
-        http.csrf();
+        http.cors(Customizer.withDefaults());
+        http.csrf().disable();
         http.logout().invalidateHttpSession(true).logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/").addLogoutHandler(keycloakLogoutHandler())
                 .and().authorizeRequests()
-                .antMatchers("/orders", "/orders/**", "/orders/receive", "/orders/schedule", "/accounts", "/accounts/**, ")
-                .hasRole("user")
+                .mvcMatchers("/orders", "/orders/**", "/orders/receive", "/orders/receive/**", "/orders/schedule", "/orders/schedule/**",
+                        "/accounts", "/accounts/**, /products/add,/products/add/**").hasRole("user")
                 .anyRequest()
                 .permitAll();
-
-
     }
 
+
 }
+
+

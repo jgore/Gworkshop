@@ -46,7 +46,9 @@ public class AccountServiceImpl implements AccountService {
                 .map(OrderlineView::getProductTitle)
                 .collect(Collectors.toList());
 
-        activeCar.addServices(productRepo.findByTitleIn(serviceNames));
+        List<ProductView> productViews = productRepo.findByTitleIn(serviceNames).stream().map(product -> conversionService.convert(product, ProductView.class)).collect(Collectors.toList());
+
+        activeCar.addServices(productViews);
 
         accountRepo.save(account);
         return activeCar;

@@ -1,0 +1,22 @@
+logging.file.path: logs
+
+spring:
+  data:
+    mongodb:
+      database:  goreit
+      authentication-database: admin
+      host: mongodb:27017
+      password: root
+      username: root
+
+keycloak:
+  realm: fixa
+  resource: fixa-app
+  auth-server-url: http://keycloak:8080/auth
+  public-client: true
+  principal-attribute: preferred_username
+  securityConstraints[0]:
+    authRoles[0]: user
+    securityCollections[0]:
+      name: user resource
+      patterns: /orders

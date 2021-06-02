@@ -1,6 +1,7 @@
 package pl.goreit.blog.domain.model;
 
 import com.google.common.collect.Lists;
+import pl.goreit.api.generated.ProductView;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class Car {
     private String model;
     private Integer year;
     private String vin;
-    private List<Product> services;
+    private List<ProductView> services;
 
     public Car(Integer No, String name, String mark, String model, Integer year, String vin) {
         this.No = No;
@@ -24,7 +25,7 @@ public class Car {
         this.services = Lists.newArrayList();
     }
 
-    public boolean addServices(List<Product> products) {
+    public boolean addServices(List<ProductView> products) {
         return this.services.addAll(products);
     }
 
@@ -53,7 +54,7 @@ public class Car {
         return vin;
     }
 
-    public List<Product> getServices() {
+    public List<ProductView> getServices() {
         return services;
     }
 

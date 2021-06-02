@@ -19,9 +19,15 @@ public class Order {
 
     private String workshopName;
 
+    //@TODO move to invoice - api
+
+    private String invoiceFileName;
+
     private List<OrderLine> orderLines;
 
     private BigDecimal totalCost;
+
+    private Status status;
 
     @JsonSerialize(using = ToStringSerializer.class)
     private LocalDateTime creationTime;
@@ -36,8 +42,12 @@ public class Order {
         this.orderLines = orderLines;
         this.creationTime = creationTime;
         orderLines.forEach(orderLine -> {
-            this.totalCost = this.totalCost.add( orderLine.getPrice().multiply(BigDecimal.valueOf(orderLine.getAmount())) );
+            this.totalCost = this.totalCost.add(orderLine.getPrice().multiply(BigDecimal.valueOf(orderLine.getAmount())));
         });
+    }
+
+    public void setInvoiceFileName(String invoiceFileName) {
+        this.invoiceFileName = invoiceFileName;
     }
 
 
