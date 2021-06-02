@@ -85,6 +85,6 @@ public class Product {
 
 
     public enum Status {
-        ACTIVE, SOLD, INACTIVE
+        ACTIVE, DISABLED
     }
 }

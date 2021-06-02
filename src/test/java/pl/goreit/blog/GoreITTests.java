@@ -5,12 +5,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GoreITTests {
+public class GoreITTests {
 
-//	@Test
-//	void contextLoads() {
-//	}
-
-
+    @Test
+    void contextLoads() {
+    }
 
 }

@@ -8,7 +8,6 @@ import pl.goreit.api.generated.CreateOrderRequest;
 import pl.goreit.api.generated.OrderLineRequest;
 import pl.goreit.api.generated.OrderResponse;
 import pl.goreit.api.generated.workshop.AddWorkshopRequest;
-import pl.goreit.api.generated.workshop.WorkshopView;
 import pl.goreit.blog.domain.DomainException;
 import pl.goreit.blog.domain.model.Product;
 import pl.goreit.blog.domain.service.OrderService;
@@ -56,7 +55,7 @@ public class TestHelperController {
             orderLineRequests.add(orderProductView);
         }
 
-        return orderService.create(new CreateOrderRequest(userId, "admin", true, true, orderLineRequests));
+        return orderService.schedule(new CreateOrderRequest(userId, orderLineRequests));
     }
 
 

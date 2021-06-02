@@ -52,7 +52,6 @@ server:
 #  http:
 #    client:
 #      enabled: true
-
 pricing:
   commission: 0.00
   default:

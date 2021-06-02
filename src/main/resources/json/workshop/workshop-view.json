@@ -4,6 +4,12 @@
     "name": {
       "type": "string"
     },
+    "owner": {
+      "type": "string"
+    },
+    "company": {
+      "$ref": "company-view.json"
+    },
     "products": {
       "type": "array",
       "items": {

@@ -10,7 +10,6 @@ import pl.goreit.blog.domain.model.Account;
 import pl.goreit.blog.domain.model.Car;
 import pl.goreit.blog.domain.model.Person;
 
-import java.math.BigDecimal;
 import java.util.stream.Collectors;
 
 @Component

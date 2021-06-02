@@ -31,6 +31,7 @@ public class WorkshopServiceImpl implements WorkshopService {
         return conversionService.convert(workshop, WorkshopView.class);
     }
 
+
     @Override
     public WorkshopView add(AddWorkshopRequest addWorkshopRequest) {
         Workshop workshop = new Workshop(

@@ -5,19 +5,20 @@ import org.springframework.core.convert.ConversionService;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
-import pl.goreit.api.generated.OrderlineView;
+import pl.goreit.api.generated.ProductView;
 import pl.goreit.api.generated.account.CreateAccountRequest;
 import pl.goreit.blog.domain.DomainException;
 import pl.goreit.blog.domain.ExceptionCode;
 import pl.goreit.blog.domain.model.Account;
 import pl.goreit.blog.domain.model.Car;
+import pl.goreit.blog.domain.model.OrderLine;
+import pl.goreit.blog.domain.model.Product;
 import pl.goreit.blog.domain.service.AccountService;
 import pl.goreit.blog.infrastructure.mongo.AccountRepo;
 import pl.goreit.blog.infrastructure.mongo.ProductRepo;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -33,7 +34,7 @@ public class AccountServiceImpl implements AccountService {
     private ConversionService conversionService;
 
     @Override
-    public Car updateWithServices(List<OrderlineView> orderLineViews) throws DomainException {
+    public Car updateWithServices(List<OrderLine> orderLines) throws DomainException {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String userId = authentication.getName();
 
@@ -42,8 +43,8 @@ public class AccountServiceImpl implements AccountService {
         Car activeCar = account.getCars().stream()
                 .filter(car -> car.getNo().equals(No)).findFirst().orElseThrow(() -> new DomainException(ExceptionCode.CAR_NOT_EXIST));
 
-        List<String> serviceNames = orderLineViews.stream()
-                .map(OrderlineView::getProductTitle)
+        List<String> serviceNames = orderLines.stream()
+                .map(OrderLine::getProductTitle)
                 .collect(Collectors.toList());
 
         List<ProductView> productViews = productRepo.findByTitleIn(serviceNames).stream().map(product -> conversionService.convert(product, ProductView.class)).collect(Collectors.toList());

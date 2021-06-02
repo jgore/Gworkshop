@@ -2,7 +2,9 @@ package pl.goreit.blog.domain.model;
 
 import com.google.common.collect.Lists;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+import pl.goreit.api.generated.ProductView;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -12,9 +14,11 @@ public class Workshop {
 
     @Id
     private String id;
+    private String owner;
+    @Indexed(unique = true)
     private String name;
 
-    private List<Product> products;
+    private List<ProductView> products;
     private List<Mechanic> mechanicList;
 
     private PhotoAlbum photoAlbum;
@@ -29,9 +33,11 @@ public class Workshop {
         ACTIVE, INACTIVE, SUSPENDED
     }
 
-    public Workshop(String id, String name, List<Product> products, List<Mechanic> mechanicList, PhotoAlbum photoAlbum, Address address, String nip) {
+    public Workshop(String id, String name, String owner, Company company, List<ProductView> products, List<Mechanic> mechanicList, PhotoAlbum photoAlbum) {
         this.id = id;
         this.name = name;
+        this.owner = owner;
+        this.company = company;
         this.products = products;
         this.mechanicList = mechanicList;
         this.photoAlbum = photoAlbum;
@@ -53,8 +59,8 @@ public class Workshop {
         return id;
     }
 
-    public String getNip() {
-        return nip;
+    public String getOwner() {
+        return owner;
     }
 
     public Company getCompany() {
@@ -69,12 +75,16 @@ public class Workshop {
         return Lists.newArrayList(mechanicList);
     }
 
-    public List<Product> getProducts() {
+    public List<ProductView> getProducts() {
         return Lists.newArrayList(products);
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    public boolean addProduct(ProductView productView) {
+        return this.products.add(productView);
+    }
+
+    public boolean removeProduct(String productTitle) {
+        return this.products.removeIf(productView -> productTitle.equals(productView.getTitle()));
     }
 
     public PhotoAlbum getPhotoAlbum() {

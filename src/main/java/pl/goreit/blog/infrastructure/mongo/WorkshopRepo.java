@@ -8,4 +8,6 @@ import pl.goreit.blog.domain.model.Workshop;
 public interface WorkshopRepo extends MongoRepository<Workshop, String> {
 
     Workshop findByName(String name);
+
+    Workshop findByOwner(String name);
 }

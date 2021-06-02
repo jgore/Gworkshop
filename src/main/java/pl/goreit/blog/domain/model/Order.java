@@ -35,21 +35,37 @@ public class Order {
     public Order() {
     }
 
-    public Order(String id, String sellerId, String userId, List<OrderLine> orderLines, LocalDateTime creationTime) {
-        this.id = id;
-        this.sellerId = sellerId;
+    public Order(String workshopName, String userId, List<OrderLine> orderLines) {
+        this.workshopName = workshopName;
         this.userId = userId;
         this.orderLines = orderLines;
-        this.creationTime = creationTime;
+        this.creationTime = LocalDateTime.now();
+        this.totalCost = BigDecimal.valueOf(0);
         orderLines.forEach(orderLine -> {
             this.totalCost = this.totalCost.add(orderLine.getPrice().multiply(BigDecimal.valueOf(orderLine.getAmount())));
         });
+        this.status = Status.SCHEDULED;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void receiveOrder() {
+        this.status = Status.RECEIVED;
     }
 
     public void setInvoiceFileName(String invoiceFileName) {
         this.invoiceFileName = invoiceFileName;
     }
 
+    public void rejectOrder() {
+        this.status = Status.REJECTED;
+    }
+
+    public void completeOrder() {
+        this.status = Status.COMPLETED;
+    }
 
     public String getId() {
         return id;
@@ -73,5 +89,9 @@ public class Order {
 
     public BigDecimal getTotalCost() {
         return totalCost;
+    }
+
+    public enum Status {
+        SCHEDULED, REJECTED, RECEIVED, COMPLETED
     }
 }

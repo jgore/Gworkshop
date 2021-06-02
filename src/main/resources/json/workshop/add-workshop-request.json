@@ -4,6 +4,9 @@
     "name": {
       "type": "string"
     },
+    "owner": {
+      "type": "string"
+    },
     "mechanicList": {
       "type": "array",
       "items": {

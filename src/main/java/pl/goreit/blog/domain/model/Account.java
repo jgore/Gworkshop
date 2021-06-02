@@ -16,12 +16,9 @@ public class Account {
     private Integer activeCarNo;
     private List<Car> cars;
 
-    private BigDecimal balance;
-    private BigDecimal coins;
-
     private LocalDateTime createdAt;
 
-    public Account(String userId, List<Car> cars, String pesel, String firstName, String lastName, Address address, BigDecimal balance, BigDecimal coins) {
+    public Account(String userId, List<Car> cars, Person person) {
         this.userId = userId;
         this.cars = cars;
         if (!cars.isEmpty()) {
